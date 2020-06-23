@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,10 +55,43 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="JsonConfig.cs" />
+    <Compile Include="mouseoverImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mouseoverImages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\iconImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>iconImages.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mouseoverImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>mouseoverImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +103,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\iconImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>iconImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,6 +120,2337 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\034.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\035.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\037.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\038.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\039.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\042.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\043.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\045.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\046.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\049.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\053.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\054.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\056.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\057.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\058.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\059.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\062.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\064.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\066.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\067.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\068.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\069.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\072.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\073.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\074.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\075.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\076.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\078.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\079.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\082.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\084.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\086.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\087.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\088.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\089.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\092.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\093.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\094.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\095.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\096.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\097.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\098.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EBF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FTL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GabeN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GabeN2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GabeN2Episode1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GBF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gmod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GOG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KanColle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KSP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KSP2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KSP3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MassEffect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minecraft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Neptunia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ori.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Overwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlagueInc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reddit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmugAnimeFace1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmugAnimeFace2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stanley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stardew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TF2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undertale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undertale2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_3DSMax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Ableton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Adobe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_AfterEffects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Animate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_ArtRage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_AutoCAD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Blender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Celtx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Cinema4D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_ClipStudioPaint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_CorelDraw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_CreativeCloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_DavinciResolve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_DreamWeaver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_FireAlpaca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Fireworks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Flash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_FLStudio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_GIMP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Illustrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Indesign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Inkscape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Lightroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_MangaStudio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_OpenCanvas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_PaintDotNet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_PaintToolSAI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Photoshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_PhotoshopElements.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Premiere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Sketchfab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Sketchup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_SourceFilmMaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Synthesia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_Vegas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_C_VirtualDJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Atom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Bitbucket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_CloudFlare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Codepen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Construct2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_CPP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Cryengine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Csharp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_CSS3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Docker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Drupal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Eclipse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_GameMaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_GameMaker2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_git.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Gitlab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_GO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Haskell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_HTML5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Java.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_JavaBean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Javascript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_jQuery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Jsfiddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Matlab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_MaxCDN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_MySQL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_NetBeans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_NotepadPP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_npm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Ococat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Opensource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_PHP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Python.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Ruby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Sass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_SublimeText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Swift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Unity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Unity5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_VisualStudio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_W3C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Webhook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_D_Xml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_AgeOfEmpires.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_AlanWake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_AngryBirds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ArkSurvival.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ARMA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ArmorGames.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_AssassinsCreed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Astroneer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Bastion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BattleblockTheater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BattleField1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BattleField4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Battlefront.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BattlefrontAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BattleNet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BeamNGDrive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Beseige.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BitBlaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BlackOps2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BlackOps3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BloonsTowerDefense5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Borderlands.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BrokenAge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_BSNES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CastleCrushers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CitiesSkylines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CitiesSkylinesAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CivilizationV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CKAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Cloud9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Cobalt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CompanyOfHeros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Crawl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CrusaderKings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Crysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_CSGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Curse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DarkSouls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DayZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Destiny.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DeusEx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Diablo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Dirt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Dishonored.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DolphinEmulator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DontStarve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Doom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Dota2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DuckGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Duelyst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DungeonOfTheEndless.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_DwarfFortress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ElderScrollsOnline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EliteDangerous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EndlessLegend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EndlessSky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EnterTheGungeon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EpicBattleFantasy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EpicGameLauncher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ESEA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EuropaUniversalis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_EVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Fable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Factorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Fallout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Farcry4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_FarmingSimulator17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_FEZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_FFXIV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_FireWatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ForHonor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_FTL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_FTLAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Gameboy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Garena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_GhostReconWildlands.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Gmod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_GOG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_GranblueFantasy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_GranblueFantasyAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_GTA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_GTAV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_GuildWars2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_H1Z1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_HalfLife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Halo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Hawken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Hearthstone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Helldivers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_HerosOfTheStorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Hitman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Homeword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_HotlineMiami.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_HumbleBundle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_HyperLightDrifter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Indiegala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_InvisibleInc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_JustCause3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_KantaiCollection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_KingdomRush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Kongregate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_KSP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_KSPAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_L4D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_LifeIsStrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Limbo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_LOL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Machinarium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Magic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_MapleStory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_MarkOfTheNinja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_MassEffect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_MassEffectAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_MGS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Minecraft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_MinecraftAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_MirrorsEdge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ModernWarfare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Morrowind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Neptunia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_NexusModMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_NFS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_NieR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_NuclearThrone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Oblivion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_OriAndTheBlindForest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Origin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_osuGame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Overwatch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Overwolf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Paladins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_PapersPlease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Payday2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_PlagueInc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_PlanetCoaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_PlanetSide2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_PlantsVSZombies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Playstation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Portal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Portal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ProgressQuest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ProjectCars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_PUBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Quake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_RainbowSix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Rimworld.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_RiskOfRain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_RocketLeague.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_RuneScape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Rust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_SanrenKagura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ShellShockLive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Skyrim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Smite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_SpaceEngine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_SpaceEngineers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Speedrunners.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Spore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_StanleyParable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Starbound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_StarCitizen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_StarCraft2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_StardewValley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_StardewValleyAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_StarTrekOnline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Steam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Stellaris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_SubNautica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_SuperMeatBoy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_SurvivingMars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TabletopSimulator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TeamFortress2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Tera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Terraria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TheBindingOfIsaac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TheCulling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TheDivision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TheEscapists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TheSims.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_ThisWarOfMine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TitanFall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TombRaider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Touhou.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TouhouAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_TrackMania.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Transistor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Tropico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Trove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Twitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_UEBS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Undertale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_UniverseSandbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Unreal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Unturned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Uplay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Warframe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WarThunder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WatchDogs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_wii.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_wiiU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Witcher3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Wizard101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WorldOfGoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WorldOfTanks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WorldOfWarplanes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WorldOfWarships.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_Worms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WormsAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_WOW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_xbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_XCOM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_G_YandereSimulator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Acer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_AMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Aorus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Asrock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_ASUS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_ATI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Corsair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_CPUZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Dell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_EVGA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Gigabyte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_GSkill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_hp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_HWiNFO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_intel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Logitech.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_MSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Nvidia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_NZXT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Razer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Roccat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_ROG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_RyzenMaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Wacom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_H_Zotac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4Chan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8chan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Access.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acrobat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Afterburner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AIMP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Airbnb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlphaCoders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Amazon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Android.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Applications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArtStation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audacity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Baidu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Balance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bandcamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Basecamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Batman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BBC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beatport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Behance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bilibili.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BitTorrent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blackberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blogger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bluestacks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bluetooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BluRay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cardboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CCleaner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheatEngine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chrome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cnet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Codecademy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CombinedCommunityCodec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Command.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Console.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cookie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crunchyroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cydia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dailymotion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Defrag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delicious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deluge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deviantART.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\digg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisplayPort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disqus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DNA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DonutChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Douban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownloadAlt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dribbble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dropbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DuckDuckGo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Duolingo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ebay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EquestriaDaily.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\etsy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Evernote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Evolve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fanfiction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Feedly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileExplorer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Film.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Firefox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flattr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flickr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foobar2000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forrst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Foursquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fraps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FunnyJunk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gallery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gamepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeforceExperience.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gelbooru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleClassroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleDocs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleDrive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleEarth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleHangouts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleInbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GooglePlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GooglePlayMusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleScholar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoogleTranslate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Groove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrooveShark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gyazo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HackerNews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hamachi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HDD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hiFive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hitbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Houzz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hudl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IGN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMDb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IrFranView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iTunes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Joomla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KhanAcademy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KickassTorrent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kickstarter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KnowYourMeme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kodi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lastfm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LifeHacker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LINE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LinkedIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Linux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loominarty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MailRu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Malwarebytes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maxthon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mediafire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meetup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MetaCritic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft_Azure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mudfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Musecore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyAnimeList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Napster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NationalGeographic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NeteaseMusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Netflix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewGrounds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewOpenstack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NicoVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OBS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Office.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Onenote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenOffice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenStack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outlook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pandora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pateron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PayPal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCMR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PCPartPicker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Periscope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phoenix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picasa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pillar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pinterest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PirateBay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pixiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Polymer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PopcornTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Powerpoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prezi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProsonalFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Protonmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Publisher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qbittorrent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQMusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuickTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Radio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RaspberryPi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rdio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Renren.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rhapsody.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rocket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoosterTeeth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RottenTomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RSS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Satellite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sharepoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShareX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shuttle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Slack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SlackerRadio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SMBC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SoftEtherVPN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Soundcloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sourceforge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Speedfan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spotify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Squarespace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StackExchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stackoverflow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StarredFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stumbleupon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SVG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sway.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swords.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teamspeak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TedTalks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TencentWeibo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TheOnion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thunderbird.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tidal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tieba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tixati.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trello.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tudou.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tumblr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tunngle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TVTropes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tweetdeck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ubuntu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Uncyclopedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Utorrent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vidme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vimeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Virtualbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Visio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vivaldi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VLC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VPN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waifu2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WallpaperEngine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WaybackMachine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webtoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weibo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WikiaFandom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wikipedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinAMP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WindowsAppStore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WolframAlpha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Word.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wordpress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xbmc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xkcd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yelp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Youku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YouTube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Youtube_Gaming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hexagons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

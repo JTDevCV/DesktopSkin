@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -12,27 +11,23 @@ namespace DesktopSkin
     public partial class Form1 : Form
     {
         // Menu Panel Components
-        List<Panel> panels;
-        List<Panel> decorBars;
-        List<Panel> iconBoxes;
-        List<Button> iconNames;
+        private List<Panel> panels;
+        private List<Panel> decorBars;
+        private List<Panel> iconBoxes;
+        private List<Button> iconNames;
 
         // NavBar Components
-        List<Panel> navBarButtons;
-        List<Panel> navBarIcons;
-        List<Button> navBarNames;
-
-
-        bool clicked;
-        string navBarMenu = "navBarButton1";
-
-        int panelsHeight, panelsWidth;
-        int decorBarHeight;
-        int iconBoxHeight, iconBoxWidth;
-        int iconNameHeight, iconNameWidth;
-        int navMenuHeight, navMenuWidth;
-        int gradientBarHeight, gradientBarWidth;
-        int animatePanelHeight, animatePanelWidth;
+        private List<Panel> navBarButtons;
+        private List<Panel> navBarIcons;
+        private List<Button> navBarNames;
+        private string navBarMenu = "navBarButton1";
+        private int panelsHeight, panelsWidth;
+        private int decorBarHeight;
+        private int iconBoxHeight, iconBoxWidth;
+        private int iconNameHeight, iconNameWidth;
+        private int navMenuHeight, navMenuWidth;
+        private int gradientBarHeight, gradientBarWidth;
+        private int animatePanelHeight, animatePanelWidth;
 
 
         public Form1()
@@ -53,7 +48,6 @@ namespace DesktopSkin
             animatePanelHeight = animatePanel.Height;
             animatePanelWidth = animatePanel.Width;
 
-            clicked = false;
 
             // Add panels to panels list
             panels = new List<Panel> { panel1, panel2, panel3, panel4, panel5, panel6};
@@ -79,45 +73,47 @@ namespace DesktopSkin
 
             // Activation 
             activationBar.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 10, 0);
-            activationBar.MouseHover += new EventHandler(screenshot);
-            activationBar.MouseHover += new EventHandler(menuPanel_default);
-            activationBar.MouseHover += new EventHandler(startupAnimation);
+            activationBar.MouseHover += new EventHandler(this.screenshot);
+            activationBar.MouseHover += new EventHandler(this.menuPanel_default);
+            activationBar.MouseHover += new EventHandler(this.startupAnimation);
+
+
 
             for (int i = 0; i < panels.Count; i++)
             {
-                panels[i].MouseEnter += new EventHandler(menuPanel_hover);
-                panels[i].MouseLeave += new EventHandler(menuPanel_default);
-                panels[i].Click += new EventHandler(menuPanel_click);
+                panels[i].MouseEnter += new EventHandler(this.menuPanel_hover);
+                panels[i].MouseLeave += new EventHandler(this.menuPanel_default);
+                panels[i].Click += new EventHandler(this.menuPanel_click);
 
-                iconBoxes[i].MouseEnter += new EventHandler(menuPanel_hover);
-                iconBoxes[i].MouseLeave += new EventHandler(menuPanel_default);
-                iconBoxes[i].Click += new EventHandler(menuPanel_click);
+                iconBoxes[i].MouseEnter += new EventHandler(this.menuPanel_hover);
+                iconBoxes[i].MouseLeave += new EventHandler(this.menuPanel_default);
+                iconBoxes[i].Click += new EventHandler(this.menuPanel_click);
 
-                iconNames[i].MouseEnter += new EventHandler(menuPanel_hover);
-                iconNames[i].MouseLeave += new EventHandler(menuPanel_default);
-                iconNames[i].Click += new EventHandler(menuPanel_click);
+                iconNames[i].MouseEnter += new EventHandler(this.menuPanel_hover);
+                iconNames[i].MouseLeave += new EventHandler(this.menuPanel_default);
+                iconNames[i].Click += new EventHandler(this.menuPanel_click);
             }
             for(int i = 0; i < navBarButtons.Count; i++)
             {
-                navBarButtons[i].MouseEnter += new EventHandler(navBarButtons_hover);
-                navBarButtons[i].MouseLeave += new EventHandler(navBarButtons_default);
-                navBarButtons[i].Click += new EventHandler(navBarButtons_Click);
+                navBarButtons[i].MouseEnter += new EventHandler(this.navBarButtons_hover);
+                navBarButtons[i].MouseLeave += new EventHandler(this.navBarButtons_default);
+                navBarButtons[i].Click += new EventHandler(this.navBarButtons_Click);
 
-                navBarIcons[i].MouseEnter += new EventHandler(navBarButtons_hover);
-                navBarIcons[i].MouseLeave += new EventHandler(navBarButtons_default);
-                navBarIcons[i].Click += new EventHandler(navBarButtons_Click);
+                navBarIcons[i].MouseEnter += new EventHandler(this.navBarButtons_hover);
+                navBarIcons[i].MouseLeave += new EventHandler(this.navBarButtons_default);
+                navBarIcons[i].Click += new EventHandler(this.navBarButtons_Click);
 
-                navBarNames[i].MouseEnter += new EventHandler(navBarButtons_hover);
-                navBarNames[i].MouseLeave += new EventHandler(navBarButtons_default);
-                navBarNames[i].Click += new EventHandler(navBarButtons_Click);
+                navBarNames[i].MouseEnter += new EventHandler(this.navBarButtons_hover);
+                navBarNames[i].MouseLeave += new EventHandler(this.navBarButtons_default);
+                navBarNames[i].Click += new EventHandler(this.navBarButtons_Click);
             }
 
-            settings.MouseEnter += new EventHandler(setting_hover);
-            settings.MouseLeave += new EventHandler(setting_default);
-            // settings.Click += new EventHandler();
+            settings.MouseEnter += new EventHandler(this.setting_hover);
+            settings.MouseLeave += new EventHandler(this.setting_default);
+            settings.Click += new EventHandler(this.setting_click);
 
-            exitButton.Click += new EventHandler(exit);
-            blurBackground.Click += new EventHandler(menuClose);
+            exitButton.Click += new EventHandler(this.exit);
+            blurBackground.Click += new EventHandler(this.menuClose);
         }
 
         // Double Buffer -- Prevents Flickering
@@ -139,6 +135,14 @@ namespace DesktopSkin
         {
             settings.BackColor = Color.FromArgb(0, Color.Black);
         }
+
+        private void setting_click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 frm = new Form2();
+            frm.Show();
+        }
+
 
         private void navBarButtons_hover(object sender, EventArgs e)
         {
@@ -305,24 +309,10 @@ namespace DesktopSkin
         // -------------------------------------------------------------------------------------menuPanel
         private void menuPanel_default(object sender, EventArgs e)
         {
-            string currentPanel_Name = ((Control)sender).Name;
-            object currentPanel_Tag = ((Control)sender).Tag;
-
-            // Checks for the correct menu panels that serves as a getway to any applications 
-            bool menuPanel = false;
+            object currentPanel = ((Control)sender).Tag;
             for (int i = 0; i < panels.Count; i++)
             {
-                // The second statement allows for MouseLeave and return the menu panels to its default state
-                if (currentPanel_Name == panels[i].Name || (currentPanel_Tag == iconBoxes[i].Tag))
-                {
-                    menuPanel = true;
-                }
-            }
-
-            if (currentPanel_Name == "activationBar" || (menuPanel && !clicked))
-            {
-                clicked = false;
-                for (int i = 0; i < panels.Count; i++)
+                if (panels[i].Tag == currentPanel)
                 {
                     panels[i].BackgroundImage = null;
                     panels[i].BackColor = Color.FromArgb(125, Color.Black);
@@ -331,6 +321,151 @@ namespace DesktopSkin
             }
             // Call iconDisplay
             iconDisplay(sender, e);
+        }
+
+        private void menuPanel_hover(object sender, EventArgs e)
+        {
+            object currentPanel = ((Control)sender).Tag;
+            // On Hover
+            for (int i = 0; i < panels.Count; i++)
+            {
+                if (panels[i].Tag == currentPanel)
+                {
+                    decorBars[i].BackColor = Color.White;
+                }
+            }
+            switch (navBarMenu)
+            {
+                case "navBarButton1":
+                    switch (currentPanel)
+                    {
+                        case "panel1":
+                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
+                            break;
+                        case "panel2":
+                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
+                            break;
+                        case "panel3":
+                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
+                            break;
+                        case "panel4":
+                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
+                            break;
+                        case "panel5":
+                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
+                            break;
+                        case "panel6":
+                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
+                            break;
+                    }
+                    break;
+                case "navBarButton2":
+                    switch (currentPanel)
+                    {
+                        case "panel1":
+                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
+                            break;
+                        case "panel2":
+                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
+                            break;
+                        case "panel3":
+                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
+                            break;
+                        case "panel4":
+                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
+                            break;
+                        case "panel5":
+                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
+                            break;
+                        case "panel6":
+                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
+                            break;
+                    }
+                    break;
+                case "navBarButton3":
+                    switch (currentPanel)
+                    {
+                        case "panel1":
+                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
+                            break;
+                        case "panel2":
+                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
+                            break;
+                        case "panel3":
+                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
+                            break;
+                        case "panel4":
+                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
+                            break;
+                        case "panel5":
+                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
+                            break;
+                        case "panel6":
+                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
+                            break;
+                    }
+                    break;
+                case "navBarButton4":
+                    switch (currentPanel)
+                    {
+                        case "panel1":
+                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
+                            break;
+                        case "panel2":
+                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
+                            break;
+                        case "panel3":
+                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
+                            break;
+                        case "panel4":
+                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
+                            break;
+                        case "panel5":
+                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
+                            break;
+                        case "panel6":
+                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
+                            break;
+                    }
+                    break;
+            }
+        }
+
+        private void menuPanel_click(object sender, EventArgs e)
+        {
+            Panel currentPanel = sender as Panel;
+            // On Click
+            currentPanel.Cursor = Cursors.AppStarting;
+            switch (currentPanel.Tag)
+            {
+                case "panel1":
+                    menuClose(sender, e);
+                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
+                    break;
+                case "panel2":
+                    menuClose(sender, e);
+                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
+                    break;
+                case "panel3":
+                    menuClose(sender, e);
+                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
+                    break;
+                case "panel4":
+                    menuClose(sender, e);
+                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
+                    break;
+                case "panel5":
+                    menuClose(sender, e);
+                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
+                    break;
+                case "panel6":
+                    menuClose(sender, e);
+                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
+                    break;
+                default:
+                    Console.WriteLine("No file execution");
+                    break;
+            }
         }
 
         private void iconDisplay(object sender, EventArgs e)
@@ -449,152 +584,6 @@ namespace DesktopSkin
             for (int i = 0; i < panels.Count; i++)
             {
                 panels[i].Refresh();
-            }
-        }
-
-        private void menuPanel_hover(object sender, EventArgs e)
-        {
-            object currentPanel = ((Control)sender).Tag;
-            // On Hover
-            for (int i = 0; i < panels.Count; i++)
-            {
-                if (panels[i].Tag == currentPanel)
-                {
-                    decorBars[i].BackColor = Color.White;
-                }
-            }
-            switch (navBarMenu)
-            {
-                case "navBarButton1":
-                    switch (currentPanel)
-                    {
-                        case "panel1":
-                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
-                            break;
-                        case "panel2":
-                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
-                            break;
-                        case "panel3":
-                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
-                            break;
-                        case "panel4":
-                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
-                            break;
-                        case "panel5":
-                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
-                            break;
-                        case "panel6":
-                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/001.png");
-                            break;
-                    }
-                    break;
-                case "navBarButton2":
-                    switch (currentPanel)
-                    {
-                        case "panel1":
-                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
-                            break;
-                        case "panel2":
-                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
-                            break;
-                        case "panel3":
-                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
-                            break;
-                        case "panel4":
-                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
-                            break;
-                        case "panel5":
-                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
-                            break;
-                        case "panel6":
-                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/003.png");
-                            break;
-                    }
-                    break;
-                case "navBarButton3":
-                    switch (currentPanel)
-                    {
-                        case "panel1":
-                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
-                            break;
-                        case "panel2":
-                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
-                            break;
-                        case "panel3":
-                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
-                            break;
-                        case "panel4":
-                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
-                            break;
-                        case "panel5":
-                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
-                            break;
-                        case "panel6":
-                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/053.png");
-                            break;
-                    }
-                    break;
-                case "navBarButton4":
-                    switch (currentPanel)
-                    {
-                        case "panel1":
-                            panels[0].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
-                            break;
-                        case "panel2":
-                            panels[1].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
-                            break;
-                        case "panel3":
-                            panels[2].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
-                            break;
-                        case "panel4":
-                            panels[3].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
-                            break;
-                        case "panel5":
-                            panels[4].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
-                            break;
-                        case "panel6":
-                            panels[5].BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/038.png");
-                            break;
-                    }
-                    break;
-            }
-        }
-
-        private void menuPanel_click(object sender, EventArgs e)
-        {
-            Panel currentPanel = sender as Panel;
-            // On Click
-            clicked = true;
-            currentPanel.Cursor = Cursors.AppStarting;
-            switch (currentPanel.Tag)
-            {
-                case "panel1":
-                    menuClose(sender, e);
-                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
-                    break;
-                case "panel2":
-                    menuClose(sender, e);
-                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
-                    break;
-                case "panel3":
-                    menuClose(sender, e);
-                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
-                    break;
-                case "panel4":
-                    menuClose(sender, e);
-                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
-                    break;
-                case "panel5":
-                    menuClose(sender, e);
-                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
-                    break;
-                case "panel6":
-                    menuClose(sender, e);
-                    Process.Start("C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe");
-                    break;
-                default:
-                    Console.WriteLine("No file execution");
-                    break;
             }
         }
 
