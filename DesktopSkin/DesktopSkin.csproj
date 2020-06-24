@@ -1571,9 +1571,6 @@
     <None Include="Resources\Applications.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Arc.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ArtStation.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1695,9 +1692,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Dailymotion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Dashboard.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Database.png" />
@@ -1839,9 +1833,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gallery.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Gamepad.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GeforceExperience.png" />
@@ -2267,9 +2258,6 @@
     <None Include="Resources\Stackoverflow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Star.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\StarredFolder.png" />
   </ItemGroup>
   <ItemGroup>
@@ -2435,6 +2423,12 @@
     <None Include="Resources\Zune.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Arc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\earth.png" />
   </ItemGroup>
   <ItemGroup>
@@ -2444,10 +2438,16 @@
     <None Include="Resources\folder.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\gamepad.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\hexagons.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\triangle.png" />

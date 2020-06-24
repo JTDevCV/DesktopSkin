@@ -34,8 +34,10 @@ namespace DesktopSkin
         public Form2()
         {
             InitializeComponent();
+        }
 
-
+        private void Form2_Load(object sender, EventArgs e)
+        {
             jsonConfig = JsonConvert.DeserializeObject<JsonConfig>(jsonFile);
 
             timer.Start();
@@ -129,8 +131,6 @@ namespace DesktopSkin
             }
         }
 
-        public static object EnvironmentFolders { get; private set; }
-
         private void navBarButtons_hover(object sender, EventArgs e)
         {
             object currentNavButton = ((Control)sender).Tag;
@@ -190,17 +190,6 @@ namespace DesktopSkin
             }
 
             iconDisplay();
-            currentSelection_Nav();
-        }
-
-        private void currentSelection_Nav()
-        {
-            //selectedNav.Text = navBarNames[currenNavMenu].Text;
-        }
-
-        private void currentSelection_Panel()
-        {
-            //selectedPanel.Text = jsonConfig.Config[currenNavMenu][currentPanelNum][4];
         }
 
         private Image readJson_mouseoverImage(int panel, int panelInfo)
@@ -257,13 +246,24 @@ namespace DesktopSkin
             iconNames[5].Text = jsonConfig.Config[currenNavMenu][5][4];
 
 
-
             // NavBarIcons
             int navBarIconHeight = navBarIcon1.Height;
-            navBarIcons[0].BackgroundImage = ResizeImage(Image.FromFile(jsonConfig.NavBarIcons[0]), navBarIconHeight, navBarIconHeight);
-            navBarIcons[1].BackgroundImage = ResizeImage(Image.FromFile(jsonConfig.NavBarIcons[1]), navBarIconHeight, navBarIconHeight);
-            navBarIcons[2].BackgroundImage = ResizeImage(Image.FromFile(jsonConfig.NavBarIcons[2]), navBarIconHeight, navBarIconHeight);
-            navBarIcons[3].BackgroundImage = ResizeImage(Image.FromFile(jsonConfig.NavBarIcons[3]), navBarIconHeight, navBarIconHeight);
+            navBarIcons[0].BackgroundImage = ResizeImage(
+                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[0]), 
+                navBarIconHeight, 
+                navBarIconHeight);
+            navBarIcons[1].BackgroundImage = ResizeImage(
+                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[1]), 
+                navBarIconHeight, 
+                navBarIconHeight);
+            navBarIcons[2].BackgroundImage = ResizeImage(
+                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[2]), 
+                navBarIconHeight, 
+                navBarIconHeight);
+            navBarIcons[3].BackgroundImage = ResizeImage(
+                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[3]), 
+                navBarIconHeight, 
+                navBarIconHeight);
         }
 
         private void panel_onLeave(object sender, EventArgs e)
@@ -382,7 +382,6 @@ namespace DesktopSkin
                     currentPanelNum = 5;
                     break;
             }
-            currentSelection_Panel();
         }
 
         public static Bitmap ResizeImage(Image image, int width, int height)

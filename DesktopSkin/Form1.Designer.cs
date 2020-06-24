@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.activationBar = new System.Windows.Forms.Panel();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.blurBackground = new System.Windows.Forms.Panel();
+            this.clock = new System.Windows.Forms.Panel();
+            this.labelDay = new System.Windows.Forms.Label();
+            this.labelDate = new System.Windows.Forms.Label();
+            this.labelSeconds = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
             this.animatePanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconName6 = new System.Windows.Forms.Button();
@@ -73,7 +78,10 @@
             this.navBarButton1 = new System.Windows.Forms.Panel();
             this.navBarIcon1 = new System.Windows.Forms.Panel();
             this.navBarName1 = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.activationBar = new System.Windows.Forms.Panel();
             this.blurBackground.SuspendLayout();
+            this.clock.SuspendLayout();
             this.animatePanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -89,27 +97,15 @@
             this.navBarButton1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // activationBar
+            // clockTimer
             // 
-            this.activationBar.BackColor = System.Drawing.Color.White;
-            this.activationBar.Location = new System.Drawing.Point(0, 0);
-            this.activationBar.Name = "activationBar";
-            this.activationBar.Size = new System.Drawing.Size(1500, 1);
-            this.activationBar.TabIndex = 1;
-            // 
-            // exitButton
-            // 
-            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.exitButton.Location = new System.Drawing.Point(1366, 12);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(86, 78);
-            this.exitButton.TabIndex = 3;
-            this.exitButton.Text = "X";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.clockTimer.Interval = 1000;
+            this.clockTimer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // blurBackground
             // 
             this.blurBackground.BackColor = System.Drawing.Color.Magenta;
+            this.blurBackground.Controls.Add(this.clock);
             this.blurBackground.Controls.Add(this.animatePanel);
             this.blurBackground.Controls.Add(this.gradientBar);
             this.blurBackground.Controls.Add(this.navMenu);
@@ -119,7 +115,66 @@
             this.blurBackground.Location = new System.Drawing.Point(0, 0);
             this.blurBackground.Name = "blurBackground";
             this.blurBackground.Size = new System.Drawing.Size(1920, 1080);
-            this.blurBackground.TabIndex = 0;
+            this.blurBackground.TabIndex = 1;
+            // 
+            // clock
+            // 
+            this.clock.BackColor = System.Drawing.Color.Transparent;
+            this.clock.Controls.Add(this.labelDay);
+            this.clock.Controls.Add(this.labelDate);
+            this.clock.Controls.Add(this.labelSeconds);
+            this.clock.Controls.Add(this.labelTime);
+            this.clock.Location = new System.Drawing.Point(650, 24);
+            this.clock.Name = "clock";
+            this.clock.Size = new System.Drawing.Size(610, 160);
+            this.clock.TabIndex = 18;
+            this.clock.Visible = false;
+            // 
+            // labelDay
+            // 
+            this.labelDay.AutoSize = true;
+            this.labelDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.labelDay.ForeColor = System.Drawing.Color.White;
+            this.labelDay.Location = new System.Drawing.Point(324, 105);
+            this.labelDay.Margin = new System.Windows.Forms.Padding(0);
+            this.labelDay.Name = "labelDay";
+            this.labelDay.Size = new System.Drawing.Size(286, 55);
+            this.labelDay.TabIndex = 4;
+            this.labelDay.Text = "SATURDAY";
+            // 
+            // labelDate
+            // 
+            this.labelDate.AutoSize = true;
+            this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.labelDate.ForeColor = System.Drawing.Color.White;
+            this.labelDate.Location = new System.Drawing.Point(0, 105);
+            this.labelDate.Margin = new System.Windows.Forms.Padding(0);
+            this.labelDate.Name = "labelDate";
+            this.labelDate.Size = new System.Drawing.Size(311, 55);
+            this.labelDate.TabIndex = 3;
+            this.labelDate.Text = "Sept 30 2020";
+            // 
+            // labelSeconds
+            // 
+            this.labelSeconds.AutoSize = true;
+            this.labelSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
+            this.labelSeconds.ForeColor = System.Drawing.Color.White;
+            this.labelSeconds.Location = new System.Drawing.Point(413, 53);
+            this.labelSeconds.Name = "labelSeconds";
+            this.labelSeconds.Size = new System.Drawing.Size(62, 44);
+            this.labelSeconds.TabIndex = 1;
+            this.labelSeconds.Text = "22";
+            // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F);
+            this.labelTime.ForeColor = System.Drawing.Color.White;
+            this.labelTime.Location = new System.Drawing.Point(156, 0);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(284, 108);
+            this.labelTime.TabIndex = 0;
+            this.labelTime.Text = "22:22";
             // 
             // animatePanel
             // 
@@ -158,7 +213,7 @@
             this.iconName6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconName6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconName6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconName6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.iconName6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.iconName6.ForeColor = System.Drawing.Color.White;
             this.iconName6.Location = new System.Drawing.Point(0, 281);
             this.iconName6.Margin = new System.Windows.Forms.Padding(0);
@@ -208,7 +263,7 @@
             this.iconName5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconName5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconName5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconName5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.iconName5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.iconName5.ForeColor = System.Drawing.Color.White;
             this.iconName5.Location = new System.Drawing.Point(0, 281);
             this.iconName5.Margin = new System.Windows.Forms.Padding(0);
@@ -258,7 +313,7 @@
             this.iconName4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconName4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconName4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconName4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.iconName4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.iconName4.ForeColor = System.Drawing.Color.White;
             this.iconName4.Location = new System.Drawing.Point(0, 281);
             this.iconName4.Margin = new System.Windows.Forms.Padding(0);
@@ -308,7 +363,7 @@
             this.iconName3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconName3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconName3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.iconName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.iconName3.ForeColor = System.Drawing.Color.White;
             this.iconName3.Location = new System.Drawing.Point(0, 281);
             this.iconName3.Margin = new System.Windows.Forms.Padding(0);
@@ -358,7 +413,7 @@
             this.iconName1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconName1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconName1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.iconName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.iconName1.ForeColor = System.Drawing.Color.White;
             this.iconName1.Location = new System.Drawing.Point(0, 281);
             this.iconName1.Margin = new System.Windows.Forms.Padding(0);
@@ -408,7 +463,7 @@
             this.iconName2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconName2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconName2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.iconName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.iconName2.ForeColor = System.Drawing.Color.White;
             this.iconName2.Location = new System.Drawing.Point(0, 281);
             this.iconName2.Margin = new System.Windows.Forms.Padding(0);
@@ -474,6 +529,8 @@
             // 
             // navBarIcon2
             // 
+            this.navBarIcon2.BackColor = System.Drawing.Color.Transparent;
+            this.navBarIcon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.navBarIcon2.Location = new System.Drawing.Point(0, 0);
             this.navBarIcon2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.navBarIcon2.Name = "navBarIcon2";
@@ -483,6 +540,7 @@
             // 
             // navBarName2
             // 
+            this.navBarName2.BackColor = System.Drawing.Color.Transparent;
             this.navBarName2.FlatAppearance.BorderSize = 0;
             this.navBarName2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.navBarName2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -497,7 +555,7 @@
             this.navBarName2.Tag = "navBarButton2";
             this.navBarName2.Text = "02";
             this.navBarName2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.navBarName2.UseVisualStyleBackColor = true;
+            this.navBarName2.UseVisualStyleBackColor = false;
             // 
             // navBarButton3
             // 
@@ -513,6 +571,8 @@
             // 
             // navBarIcon3
             // 
+            this.navBarIcon3.BackColor = System.Drawing.Color.Transparent;
+            this.navBarIcon3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.navBarIcon3.Location = new System.Drawing.Point(0, 0);
             this.navBarIcon3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.navBarIcon3.Name = "navBarIcon3";
@@ -522,6 +582,7 @@
             // 
             // navBarName3
             // 
+            this.navBarName3.BackColor = System.Drawing.Color.Transparent;
             this.navBarName3.FlatAppearance.BorderSize = 0;
             this.navBarName3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.navBarName3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -536,7 +597,7 @@
             this.navBarName3.Tag = "navBarButton3";
             this.navBarName3.Text = "03";
             this.navBarName3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.navBarName3.UseVisualStyleBackColor = true;
+            this.navBarName3.UseVisualStyleBackColor = false;
             // 
             // navBarPanel
             // 
@@ -573,6 +634,8 @@
             // 
             // navBarIcon4
             // 
+            this.navBarIcon4.BackColor = System.Drawing.Color.Transparent;
+            this.navBarIcon4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.navBarIcon4.Location = new System.Drawing.Point(0, 0);
             this.navBarIcon4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.navBarIcon4.Name = "navBarIcon4";
@@ -582,6 +645,7 @@
             // 
             // navBarName4
             // 
+            this.navBarName4.BackColor = System.Drawing.Color.Transparent;
             this.navBarName4.FlatAppearance.BorderSize = 0;
             this.navBarName4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.navBarName4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -596,7 +660,7 @@
             this.navBarName4.Tag = "navBarButton4";
             this.navBarName4.Text = "04";
             this.navBarName4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.navBarName4.UseVisualStyleBackColor = true;
+            this.navBarName4.UseVisualStyleBackColor = false;
             // 
             // navBarButton1
             // 
@@ -612,6 +676,8 @@
             // 
             // navBarIcon1
             // 
+            this.navBarIcon1.BackColor = System.Drawing.Color.Transparent;
+            this.navBarIcon1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.navBarIcon1.Location = new System.Drawing.Point(0, 0);
             this.navBarIcon1.Margin = new System.Windows.Forms.Padding(0);
             this.navBarIcon1.Name = "navBarIcon1";
@@ -621,6 +687,7 @@
             // 
             // navBarName1
             // 
+            this.navBarName1.BackColor = System.Drawing.Color.Transparent;
             this.navBarName1.FlatAppearance.BorderSize = 0;
             this.navBarName1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.navBarName1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -635,7 +702,25 @@
             this.navBarName1.Tag = "navBarButton1";
             this.navBarName1.Text = "01";
             this.navBarName1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.navBarName1.UseVisualStyleBackColor = true;
+            this.navBarName1.UseVisualStyleBackColor = false;
+            // 
+            // exitButton
+            // 
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.exitButton.Location = new System.Drawing.Point(1366, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(86, 78);
+            this.exitButton.TabIndex = 3;
+            this.exitButton.Text = "X";
+            this.exitButton.UseVisualStyleBackColor = true;
+            // 
+            // activationBar
+            // 
+            this.activationBar.BackColor = System.Drawing.Color.White;
+            this.activationBar.Location = new System.Drawing.Point(0, 0);
+            this.activationBar.Name = "activationBar";
+            this.activationBar.Size = new System.Drawing.Size(1500, 1);
+            this.activationBar.TabIndex = 1;
             // 
             // Form1
             // 
@@ -650,7 +735,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.Magenta;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.blurBackground.ResumeLayout(false);
+            this.clock.ResumeLayout(false);
+            this.clock.PerformLayout();
             this.animatePanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -669,27 +757,30 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel activationBar;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Timer clockTimer;
         private System.Windows.Forms.Panel blurBackground;
-        private System.Windows.Forms.Panel navMenu;
-        private System.Windows.Forms.Panel navBarButton1;
-        private System.Windows.Forms.Panel navBarIcon1;
-        private System.Windows.Forms.Button navBarName1;
-        private System.Windows.Forms.Panel navBarButton4;
-        private System.Windows.Forms.Panel navBarIcon4;
-        private System.Windows.Forms.Button navBarName4;
-        private System.Windows.Forms.Panel navBarPanel;
-        private System.Windows.Forms.Panel navBarButton3;
-        private System.Windows.Forms.Panel navBarIcon3;
-        private System.Windows.Forms.Button navBarName3;
-        private System.Windows.Forms.Panel navBarButton2;
-        private System.Windows.Forms.Panel navBarIcon2;
-        private System.Windows.Forms.Button navBarName2;
-        private System.Windows.Forms.Panel gradientBar;
-        private System.Windows.Forms.Panel settings;
+        private System.Windows.Forms.Panel clock;
+        private System.Windows.Forms.Label labelDay;
+        private System.Windows.Forms.Label labelDate;
+        private System.Windows.Forms.Label labelSeconds;
+        private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Panel animatePanel;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button iconName6;
+        private System.Windows.Forms.Panel iconBox6;
+        private System.Windows.Forms.Panel decorBar6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button iconName5;
+        private System.Windows.Forms.Panel iconBox5;
+        private System.Windows.Forms.Panel decorBar5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button iconName4;
+        private System.Windows.Forms.Panel iconBox4;
+        private System.Windows.Forms.Panel decorBar4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button iconName3;
+        private System.Windows.Forms.Panel iconBox3;
+        private System.Windows.Forms.Panel decorBar3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button iconName1;
         private System.Windows.Forms.Panel iconBox1;
@@ -698,22 +789,24 @@
         private System.Windows.Forms.Button iconName2;
         private System.Windows.Forms.Panel iconBox2;
         private System.Windows.Forms.Panel decorBar2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button iconName3;
-        private System.Windows.Forms.Panel iconBox3;
-        private System.Windows.Forms.Panel decorBar3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button iconName4;
-        private System.Windows.Forms.Panel iconBox4;
-        private System.Windows.Forms.Panel decorBar4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button iconName5;
-        private System.Windows.Forms.Panel iconBox5;
-        private System.Windows.Forms.Panel decorBar5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button iconName6;
-        private System.Windows.Forms.Panel iconBox6;
-        private System.Windows.Forms.Panel decorBar6;
+        private System.Windows.Forms.Panel gradientBar;
+        private System.Windows.Forms.Panel navMenu;
+        private System.Windows.Forms.Panel navBarButton2;
+        private System.Windows.Forms.Panel navBarIcon2;
+        private System.Windows.Forms.Button navBarName2;
+        private System.Windows.Forms.Panel navBarButton3;
+        private System.Windows.Forms.Panel navBarIcon3;
+        private System.Windows.Forms.Button navBarName3;
+        private System.Windows.Forms.Panel navBarPanel;
+        private System.Windows.Forms.Panel settings;
+        private System.Windows.Forms.Panel navBarButton4;
+        private System.Windows.Forms.Panel navBarIcon4;
+        private System.Windows.Forms.Button navBarName4;
+        private System.Windows.Forms.Panel navBarButton1;
+        private System.Windows.Forms.Panel navBarIcon1;
+        private System.Windows.Forms.Button navBarName1;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Panel activationBar;
     }
 }
 
