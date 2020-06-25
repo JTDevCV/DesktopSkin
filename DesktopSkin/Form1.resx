@@ -120,15 +120,4 @@
   <metadata name="clockTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="settings.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAABGdBTUEAALGPC/xhBQAAAR5JREFUaEPt
-        1zGOwjAUBNAUVBQUERVFCqo0OQMNXW4QTpDj0ETiJByAc3CWMLG/JcuxlKSyf5gnjRBeI/+Rdk22ICIi
-        IiIioqhxHEvkJbnJsn4oUyFOL8v6oUy+xTDQYOfapJXP+sViBnNICtPhdoZNVBTrEHcBrE0jn/WLfZBw
-        X2cO0QaD8/LIAoZ8IF/JRZZn8LMDcpWcZDlfGLJHnEqWdcHgNXIP8kQcUwyvZyTct5TaHJICDl+67l2x
-        1r7dJOvvMbXF9vmrGIOB9F8eMSgzu+7xekTc1X40G/cAZfy/MfOsuAtTGdvJyL8Yhlx6CC5ln1/sjcT2
-        hkn3EIzD+T1m326SrthaGJKXhyoo0yDuUjD/QRMREREREf21ovgBe0Q0qL58ccoAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

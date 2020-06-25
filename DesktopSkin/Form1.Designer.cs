@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.clockTimer = new System.Windows.Forms.Timer(this.components);
             this.blurBackground = new System.Windows.Forms.Panel();
             this.clock = new System.Windows.Forms.Panel();
@@ -104,6 +103,10 @@
             // 
             // blurBackground
             // 
+            this.blurBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.blurBackground.AutoSize = true;
             this.blurBackground.BackColor = System.Drawing.Color.Magenta;
             this.blurBackground.Controls.Add(this.clock);
             this.blurBackground.Controls.Add(this.animatePanel);
@@ -111,7 +114,6 @@
             this.blurBackground.Controls.Add(this.navMenu);
             this.blurBackground.Controls.Add(this.exitButton);
             this.blurBackground.Controls.Add(this.activationBar);
-            this.blurBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.blurBackground.Location = new System.Drawing.Point(0, 0);
             this.blurBackground.Name = "blurBackground";
             this.blurBackground.Size = new System.Drawing.Size(1920, 1080);
@@ -119,6 +121,10 @@
             // 
             // clock
             // 
+            this.clock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.clock.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.clock.BackColor = System.Drawing.Color.Transparent;
             this.clock.Controls.Add(this.labelDay);
             this.clock.Controls.Add(this.labelDate);
@@ -132,6 +138,9 @@
             // 
             // labelDay
             // 
+            this.labelDay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDay.AutoSize = true;
             this.labelDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.labelDay.ForeColor = System.Drawing.Color.White;
@@ -144,6 +153,9 @@
             // 
             // labelDate
             // 
+            this.labelDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.labelDate.ForeColor = System.Drawing.Color.White;
@@ -156,6 +168,9 @@
             // 
             // labelSeconds
             // 
+            this.labelSeconds.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSeconds.AutoSize = true;
             this.labelSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
             this.labelSeconds.ForeColor = System.Drawing.Color.White;
@@ -167,6 +182,9 @@
             // 
             // labelTime
             // 
+            this.labelTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F);
             this.labelTime.ForeColor = System.Drawing.Color.White;
@@ -493,6 +511,8 @@
             // 
             // gradientBar
             // 
+            this.gradientBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gradientBar.BackColor = System.Drawing.Color.White;
             this.gradientBar.Location = new System.Drawing.Point(80, 199);
             this.gradientBar.Name = "gradientBar";
@@ -502,6 +522,8 @@
             // 
             // navMenu
             // 
+            this.navMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.navMenu.BackColor = System.Drawing.Color.Transparent;
             this.navMenu.Controls.Add(this.navBarButton2);
             this.navMenu.Controls.Add(this.navBarButton3);
@@ -612,7 +634,7 @@
             // settings
             // 
             this.settings.BackColor = System.Drawing.Color.Transparent;
-            this.settings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("settings.BackgroundImage")));
+            this.settings.BackgroundImage = global::DesktopSkin.icons.control;
             this.settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.settings.Location = new System.Drawing.Point(1083, 0);
             this.settings.Margin = new System.Windows.Forms.Padding(0);
@@ -716,6 +738,8 @@
             // 
             // activationBar
             // 
+            this.activationBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.activationBar.BackColor = System.Drawing.Color.White;
             this.activationBar.Location = new System.Drawing.Point(0, 0);
             this.activationBar.Name = "activationBar";
@@ -724,8 +748,8 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
@@ -753,6 +777,7 @@
             this.navBarButton4.ResumeLayout(false);
             this.navBarButton1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

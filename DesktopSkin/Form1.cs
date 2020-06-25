@@ -34,7 +34,7 @@ namespace DesktopSkin
         string jsonFile = File.ReadAllText(@"C:\Users\joshk\OneDrive\Documents\GitHub\C#\DesktopSkin\panelLinks.json");
         JsonConfig jsonConfig;
 
-        int currenNavMenu = 0;
+        int currentNavMenu = 0;
 
         public Form1()
         {
@@ -86,10 +86,11 @@ namespace DesktopSkin
 
             // Activation 
             activationBar.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 10, 0);
-            activationBar.MouseHover += new EventHandler(this.screenshot);
-            activationBar.MouseHover += new EventHandler(this.menuPanel_default);
-            activationBar.MouseHover += new EventHandler(this.startupAnimation);
+            //activationBar.MouseHover += new EventHandler(this.screenshot);
+            //activationBar.MouseHover += new EventHandler(this.menuPanel_default);
+            //activationBar.MouseHover += new EventHandler(this.startupAnimation);
 
+            activationBar.MouseHover += new EventHandler(this.setting_click);
 
 
             for (int i = 0; i < panels.Count; i++)
@@ -140,16 +141,30 @@ namespace DesktopSkin
                 return handleparam;
             }
         }
-        private Image readJson_mouseoverImage(int panel, int panelInfo)
+
+        public Image readJson_navIcons(int buttonNum)
         {
-            return (Image)mouseoverImages.ResourceManager.GetObject(jsonConfig.Config[currenNavMenu][panel][panelInfo]);
+            return (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[buttonNum]);
         }
-        private Image readJson_iconImages(int panel, int panelInfo)
+        public string readJson_navIconsFilename(int buttonNum)
         {
-            return (Image)icons.ResourceManager.GetObject(jsonConfig.Config[currenNavMenu][panel][panelInfo]);
+            return jsonConfig.NavBarIcons[buttonNum];
         }
 
 
+        public Image readJson_mouseoverImage(int currentNavMenu, int panel)
+        {
+            return (Image)mouseoverImages.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][1]);
+        }
+        public Image readJson_iconImages(int currentNavMenu, int panel)
+        {
+            return (Image)icons.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][2]);
+        }
+
+        public string readJson_iconName(int currentNavMenu, int panel)
+        {
+            return jsonConfig.Config[currentNavMenu][panel][4];
+        }
 
         // ---------------------------------Settings hover, default, click
         private void setting_hover(object sender, EventArgs e)
@@ -198,24 +213,24 @@ namespace DesktopSkin
         private void navBarButtons_Click(object sender, EventArgs e)
         {
             object currentNavButton_Tag = ((Control)sender).Tag;
-            int previous = currenNavMenu;
+            int previous = currentNavMenu;
             switch (currentNavButton_Tag)
             {
                 case "navBarButton1":
-                    currenNavMenu = 0;
+                    currentNavMenu = 0;
                     break;
                 case "navBarButton2":
-                    currenNavMenu = 1;
+                    currentNavMenu = 1;
                     break;
                 case "navBarButton3":
-                    currenNavMenu = 2;
+                    currentNavMenu = 2;
                     break;
                 case "navBarButton4":
-                    currenNavMenu = 3;
+                    currentNavMenu = 3;
                     break;
             }
 
-            if (previous != currenNavMenu)
+            if (previous != currentNavMenu)
             {
                 panelAnimation(sender, e);
             }
@@ -379,32 +394,32 @@ namespace DesktopSkin
             if (panel1.Tag == currentPanel)
             {
                 // Panel 1
-                panels[0].BackgroundImage = readJson_mouseoverImage(0, 1);
+                panels[0].BackgroundImage = readJson_mouseoverImage(currentNavMenu, 0);
             }
             if (panel2.Tag == currentPanel)
             {
                 // Panel 2
-                panels[1].BackgroundImage = readJson_mouseoverImage(1, 1);
+                panels[1].BackgroundImage = readJson_mouseoverImage(currentNavMenu, 1);
             }
             if (panel3.Tag == currentPanel)
             {
                 // Panel 3
-                panels[2].BackgroundImage = readJson_mouseoverImage(2, 1);
+                panels[2].BackgroundImage = readJson_mouseoverImage(currentNavMenu, 2);
             }
             if (panel4.Tag == currentPanel)
             {
                 // Panel 4
-                panels[3].BackgroundImage = readJson_mouseoverImage(3, 1);
+                panels[3].BackgroundImage = readJson_mouseoverImage(currentNavMenu, 3);
             }
             if (panel5.Tag == currentPanel)
             {
                 // Panel 5
-                panels[4].BackgroundImage = readJson_mouseoverImage(4, 1);
+                panels[4].BackgroundImage = readJson_mouseoverImage(currentNavMenu, 4);
             }
             if (panel6.Tag == currentPanel)
             {
                 // Panel 6
-                panels[5].BackgroundImage = readJson_mouseoverImage(5, 1);
+                panels[5].BackgroundImage = readJson_mouseoverImage(currentNavMenu, 5);
             }
         }
 
@@ -448,36 +463,34 @@ namespace DesktopSkin
         private void iconDisplay()
         {
             // Panel 1
-            iconBoxes[0].BackgroundImage = readJson_iconImages(0, 2);
-            iconNames[0].Text = jsonConfig.Config[currenNavMenu][0][4];
+            iconBoxes[0].BackgroundImage = readJson_iconImages(currentNavMenu, 0);
+            iconNames[0].Text = jsonConfig.Config[currentNavMenu][0][4];
 
             // Panel 2
-            iconBoxes[1].BackgroundImage = readJson_iconImages(1, 2);
-            iconNames[1].Text = jsonConfig.Config[currenNavMenu][1][4];
+            iconBoxes[1].BackgroundImage = readJson_iconImages(currentNavMenu, 1);
+            iconNames[1].Text = jsonConfig.Config[currentNavMenu][1][4];
 
             // Panel 3
-            iconBoxes[2].BackgroundImage = readJson_iconImages(2, 2);
-            iconNames[2].Text = jsonConfig.Config[currenNavMenu][2][4];
+            iconBoxes[2].BackgroundImage = readJson_iconImages(currentNavMenu, 2);
+            iconNames[2].Text = jsonConfig.Config[currentNavMenu][2][4];
 
             // Panel 4
-            iconBoxes[3].BackgroundImage = readJson_iconImages(3, 2);
-            iconNames[3].Text = jsonConfig.Config[currenNavMenu][3][4];
+            iconBoxes[3].BackgroundImage = readJson_iconImages(currentNavMenu, 3);
+            iconNames[3].Text = jsonConfig.Config[currentNavMenu][3][4];
 
             // Panel 5
-            iconBoxes[4].BackgroundImage = readJson_iconImages(4, 2);
-            iconNames[4].Text = jsonConfig.Config[currenNavMenu][4][4];
+            iconBoxes[4].BackgroundImage = readJson_iconImages(currentNavMenu, 4);
+            iconNames[4].Text = jsonConfig.Config[currentNavMenu][4][4];
 
             // Panel 6
-            iconBoxes[5].BackgroundImage = readJson_iconImages(5, 2);
-            iconNames[5].Text = jsonConfig.Config[currenNavMenu][5][4];
-
-
+            iconBoxes[5].BackgroundImage = readJson_iconImages(currentNavMenu, 5);
+            iconNames[5].Text = jsonConfig.Config[currentNavMenu][5][4];
 
             // NavBarIcons
-            navBarIcons[0].BackgroundImage = (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[0]);
-            navBarIcons[1].BackgroundImage = (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[1]);
-            navBarIcons[2].BackgroundImage = (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[2]);
-            navBarIcons[3].BackgroundImage = (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[3]);
+            navBarIcons[0].BackgroundImage = readJson_navIcons(0);
+            navBarIcons[1].BackgroundImage = readJson_navIcons(1);
+            navBarIcons[2].BackgroundImage = readJson_navIcons(2);
+            navBarIcons[3].BackgroundImage = readJson_navIcons(3);
         }
 
         private void screenshot(object sender, EventArgs e)
@@ -504,7 +517,7 @@ namespace DesktopSkin
             this.BackgroundImage = bmpScreenshot;
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        public void timer_Tick(object sender, EventArgs e)
         {
             labelTime.Text = DateTime.Now.ToString("HH:mm");
             labelSeconds.Text = DateTime.Now.ToString("ss");

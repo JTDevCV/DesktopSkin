@@ -5,19 +5,16 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
-using Newtonsoft;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace DesktopSkin
 {
     public partial class Form2 : Form
     {
-        string jsonFile = File.ReadAllText(@"C:\Users\joshk\OneDrive\Documents\GitHub\C#\DesktopSkin\panelLinks.json");
-        JsonConfig jsonConfig;
-
-        int currenNavMenu = 0;
+        int currentNavMenu = 0;
+#pragma warning disable CS0414 // The field 'Form2.currentPanelNum' is assigned but its value is never used
         int currentPanelNum = 0;
+#pragma warning restore CS0414 // The field 'Form2.currentPanelNum' is assigned but its value is never used
 
         List<Panel> panels;
         List<Panel> decorBars;
@@ -31,6 +28,7 @@ namespace DesktopSkin
 
         int iconBoxesHeight;
 
+        Form1 frm = new Form1();
         public Form2()
         {
             InitializeComponent();
@@ -38,7 +36,8 @@ namespace DesktopSkin
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            jsonConfig = JsonConvert.DeserializeObject<JsonConfig>(jsonFile);
+            frm.Show();
+            frm.Hide();
 
             timer.Start();
 
@@ -116,6 +115,11 @@ namespace DesktopSkin
                 navBarNames[i].Click += new EventHandler(this.navBarButtons_Click);
             }
 
+            iconHolder1.Icon = frm.readJson_iconImages(currentNavMenu, 4);
+            iconHolder1.IconText = frm.readJson_iconName(currentNavMenu, 4);
+
+            selectedNav.Click += new EventHandler(intializeLabels_Nav);
+
             helpIcon.BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/help.png");
             exitSetting.Click += new EventHandler(this.exitButton);
         }
@@ -129,6 +133,19 @@ namespace DesktopSkin
                 handleparam.ExStyle |= 0x02000000;
                 return handleparam;
             }
+        }
+
+        private void intializeLabels_Nav(object sender, EventArgs e)
+        {
+            selectedNav.FlatStyle = FlatStyle.Standard;
+            labelNavIcon.Visible = true;
+            currentNavIconName.Visible = true;
+            navInfo();
+        }
+
+        private void navInfo()
+        {
+            currentNavIconName.Text = frm.readJson_navIconsFilename(currentNavMenu);
         }
 
         private void navBarButtons_hover(object sender, EventArgs e)
@@ -176,92 +193,85 @@ namespace DesktopSkin
             switch (currentNavButton_Tag)
             {
                 case "navBarButton1":
-                    currenNavMenu = 0;
+                    currentNavMenu = 0;
                     break;
                 case "navBarButton2":
-                    currenNavMenu = 1;
+                    currentNavMenu = 1;
                     break;
                 case "navBarButton3":
-                    currenNavMenu = 2;
+                    currentNavMenu = 2;
                     break;
                 case "navBarButton4":
-                    currenNavMenu = 3;
+                    currentNavMenu = 3;
                     break;
             }
 
             iconDisplay();
-        }
-
-        private Image readJson_mouseoverImage(int panel, int panelInfo)
-        {
-            return (Image)mouseoverImages.ResourceManager.GetObject(jsonConfig.Config[currenNavMenu][panel][panelInfo]);
-        }
-        private Image readJson_iconImages(int panel, int panelInfo)
-        {
-            return (Image)icons.ResourceManager.GetObject(jsonConfig.Config[currenNavMenu][panel][panelInfo]);
+            selectedNav.Text = navBarNames[currentNavMenu].Text;
+            navInfo();
         }
 
         private void iconDisplay()
         {
             // Panel 1
             iconBoxes[0].BackgroundImage = ResizeImage(
-                readJson_iconImages(0,2), 
+                frm.readJson_iconImages(currentNavMenu, 0), 
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[0].Text = jsonConfig.Config[currenNavMenu][0][4];
+            iconNames[0].Text = frm.readJson_iconName(currentNavMenu, 0);
 
             // Panel 2
             iconBoxes[1].BackgroundImage = ResizeImage(
-                readJson_iconImages(1, 2),
+                frm.readJson_iconImages(currentNavMenu, 1),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[1].Text = jsonConfig.Config[currenNavMenu][1][4];
+            iconNames[1].Text = frm.readJson_iconName(currentNavMenu, 1);
 
             // Panel 3
             iconBoxes[2].BackgroundImage = ResizeImage(
-                readJson_iconImages(2, 2),
+                frm.readJson_iconImages(currentNavMenu, 2),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[2].Text = jsonConfig.Config[currenNavMenu][2][4];
+            iconNames[2].Text = frm.readJson_iconName(currentNavMenu, 2);
 
             // Panel 4
             iconBoxes[3].BackgroundImage = ResizeImage(
-                readJson_iconImages(3, 2),
+                frm.readJson_iconImages(currentNavMenu, 3),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[3].Text = jsonConfig.Config[currenNavMenu][3][4];
+            iconNames[3].Text = frm.readJson_iconName(currentNavMenu, 3);
 
             // Panel 5
             iconBoxes[4].BackgroundImage = ResizeImage(
-                readJson_iconImages(4, 2),
+                frm.readJson_iconImages(currentNavMenu, 4),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[4].Text = jsonConfig.Config[currenNavMenu][4][4];
+            iconNames[4].Text = frm.readJson_iconName(currentNavMenu, 4);
 
             // Panel 6
             iconBoxes[5].BackgroundImage = ResizeImage(
-                readJson_iconImages(5, 2),
+                frm.readJson_iconImages(currentNavMenu, 5),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[5].Text = jsonConfig.Config[currenNavMenu][5][4];
+            iconNames[5].Text = frm.readJson_iconName(currentNavMenu, 5);
 
 
             // NavBarIcons
             int navBarIconHeight = navBarIcon1.Height;
             navBarIcons[0].BackgroundImage = ResizeImage(
-                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[0]), 
+                frm.readJson_navIcons(0),
                 navBarIconHeight, 
                 navBarIconHeight);
             navBarIcons[1].BackgroundImage = ResizeImage(
-                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[1]), 
+                frm.readJson_navIcons(1),
                 navBarIconHeight, 
                 navBarIconHeight);
             navBarIcons[2].BackgroundImage = ResizeImage(
-                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[2]), 
+                frm.readJson_navIcons(2),
                 navBarIconHeight, 
                 navBarIconHeight);
             navBarIcons[3].BackgroundImage = ResizeImage(
-                (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[3]), 
+                frm.readJson_navIcons(3),
                 navBarIconHeight, 
                 navBarIconHeight);
         }
@@ -281,8 +291,6 @@ namespace DesktopSkin
             }
         }
 
-        
-
         private void panel_onEnter(object sender, EventArgs e)
         {
             object currentPanel = ((Control)sender).Tag;
@@ -300,7 +308,7 @@ namespace DesktopSkin
             {
                 // Panel 1
                 panels[0].BackgroundImage = ResizeImage(
-                    readJson_mouseoverImage(0, 1),
+                    frm.readJson_mouseoverImage(currentNavMenu, 0),
                     panel1.Width, 
                     panel1.Height);
             }
@@ -308,7 +316,7 @@ namespace DesktopSkin
             {
                 // Panel 2
                 panels[1].BackgroundImage = ResizeImage(
-                    readJson_mouseoverImage(1, 1),
+                    frm.readJson_mouseoverImage(currentNavMenu, 1),
                     panel1.Width, 
                     panel1.Height);
             }
@@ -316,7 +324,7 @@ namespace DesktopSkin
             {
                 // Panel 3
                 panels[2].BackgroundImage = ResizeImage(
-                    readJson_mouseoverImage(2, 1),
+                    frm.readJson_mouseoverImage(currentNavMenu, 2),
                     panel1.Width, 
                     panel1.Height);
             }
@@ -324,7 +332,7 @@ namespace DesktopSkin
             {
                 // Panel 4
                 panels[3].BackgroundImage = ResizeImage(
-                    readJson_mouseoverImage(3, 1),
+                    frm.readJson_mouseoverImage(currentNavMenu, 3),
                     panel1.Width, 
                     panel1.Height);
             }
@@ -332,7 +340,7 @@ namespace DesktopSkin
             {
                 // Panel 5
                 panels[4].BackgroundImage = ResizeImage(
-                    readJson_mouseoverImage(4, 1),
+                    frm.readJson_mouseoverImage(currentNavMenu, 4),
                     panel1.Width, 
                     panel1.Height);
             }
@@ -340,7 +348,7 @@ namespace DesktopSkin
             {
                 // Panel 6
                 panels[5].BackgroundImage = ResizeImage(
-                    readJson_mouseoverImage(5, 1),
+                    frm.readJson_mouseoverImage(currentNavMenu, 5),
                     panel1.Width, 
                     panel1.Height);
             }
@@ -382,6 +390,8 @@ namespace DesktopSkin
                     currentPanelNum = 5;
                     break;
             }
+
+            selectedPanel.Text = frm.readJson_iconName(currentNavMenu, currentPanelNum);
         }
 
         public static Bitmap ResizeImage(Image image, int width, int height)

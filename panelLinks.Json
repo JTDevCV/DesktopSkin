@@ -1,0 +1,188 @@
+{
+	"NavBarIcons" : 
+	[
+		"hexagons",
+		"Arc",
+		"Gamepad",
+		"Dashboard"
+	],
+	"Config" : 
+	[
+		[
+			[
+				"panel1",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"1"
+			],
+			[
+				"panel2",
+				"_003",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"2"
+			],
+			[
+				"panel3",
+				"_038",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"3"
+			],
+			[
+				"panel4",
+				"_053",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"4"
+			],
+			[
+				"panel5",
+				"_003",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"5"
+			],
+			[
+				"panel6",
+				"_038",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"6"
+			]
+		],
+		[
+			[
+				"panel1",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Nav2"
+			],
+			[
+				"panel2",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel3",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel4",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel5",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel6",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			]
+		],
+		[
+			[
+				"panel1",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Nav3"
+			],
+			[
+				"panel2",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel3",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel4",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel5",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel6",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			]
+		],
+		[
+			[
+				"panel1",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Nav4"
+			],
+			[
+				"panel2",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel3",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel4",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel5",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			],
+			[
+				"panel6",
+				"_001",
+				"_G_Beseige",
+				"C:/Program Files (x86)/Minecraft Launcher/MinecraftLauncher.exe",
+				"Beseige"
+			]
+		]
+	]
+}
