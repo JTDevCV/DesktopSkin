@@ -74,6 +74,8 @@
             this.iconName4 = new System.Windows.Forms.Button();
             this.iconBox4 = new System.Windows.Forms.Panel();
             this.settingsMenu = new System.Windows.Forms.Panel();
+            this.navColorTXT = new System.Windows.Forms.TextBox();
+            this.navColor = new System.Windows.Forms.Button();
             this.currentNavIconName = new System.Windows.Forms.TextBox();
             this.labelNavIcon = new System.Windows.Forms.Button();
             this.dividend = new System.Windows.Forms.Panel();
@@ -90,14 +92,6 @@
             this.backGroundPanel = new System.Windows.Forms.Panel();
             this.iconGallery = new System.Windows.Forms.Panel();
             this.tableLayoutIconGal = new System.Windows.Forms.TableLayoutPanel();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.previousButton = new System.Windows.Forms.Button();
-            this.sideBarMenu = new System.Windows.Forms.Panel();
-            this.navIconImages = new System.Windows.Forms.Button();
-            this.iconGalButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.stopProgram = new System.Windows.Forms.Button();
-            this.iconGalTimer = new System.Windows.Forms.Timer(this.components);
             this.iconDisplay15 = new DesktopSkin.IconDisplay();
             this.iconDisplay14 = new DesktopSkin.IconDisplay();
             this.iconDisplay13 = new DesktopSkin.IconDisplay();
@@ -113,8 +107,14 @@
             this.iconDisplay3 = new DesktopSkin.IconDisplay();
             this.iconDisplay2 = new DesktopSkin.IconDisplay();
             this.iconDisplay1 = new DesktopSkin.IconDisplay();
-            this.navColorTXT = new System.Windows.Forms.TextBox();
-            this.navColor = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.previousButton = new System.Windows.Forms.Button();
+            this.sideBarMenu = new System.Windows.Forms.Panel();
+            this.navIconImages = new System.Windows.Forms.Button();
+            this.iconGalButton = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.stopProgram = new System.Windows.Forms.Button();
+            this.iconGalTimer = new System.Windows.Forms.Timer(this.components);
             this.menuBar.SuspendLayout();
             this.displayContent.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -696,6 +696,31 @@
             this.settingsMenu.Size = new System.Drawing.Size(948, 213);
             this.settingsMenu.TabIndex = 15;
             // 
+            // navColorTXT
+            // 
+            this.navColorTXT.Location = new System.Drawing.Point(146, 81);
+            this.navColorTXT.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.navColorTXT.Name = "navColorTXT";
+            this.navColorTXT.Size = new System.Drawing.Size(153, 20);
+            this.navColorTXT.TabIndex = 25;
+            this.navColorTXT.Visible = false;
+            // 
+            // navColor
+            // 
+            this.navColor.AutoSize = true;
+            this.navColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.navColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.navColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.navColor.Location = new System.Drawing.Point(32, 75);
+            this.navColor.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.navColor.Name = "navColor";
+            this.navColor.Size = new System.Drawing.Size(104, 31);
+            this.navColor.TabIndex = 24;
+            this.navColor.Text = "NavBar Color";
+            this.navColor.UseVisualStyleBackColor = true;
+            this.navColor.Visible = false;
+            // 
             // currentNavIconName
             // 
             this.currentNavIconName.Location = new System.Drawing.Point(117, 133);
@@ -910,116 +935,6 @@
             this.tableLayoutIconGal.Size = new System.Drawing.Size(0, 665);
             this.tableLayoutIconGal.TabIndex = 27;
             // 
-            // nextButton
-            // 
-            this.nextButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.nextButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.nextButton.FlatAppearance.BorderSize = 0;
-            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextButton.Location = new System.Drawing.Point(-22, 0);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(0);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(32, 665);
-            this.nextButton.TabIndex = 25;
-            this.nextButton.UseVisualStyleBackColor = false;
-            // 
-            // previousButton
-            // 
-            this.previousButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.previousButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.previousButton.FlatAppearance.BorderSize = 0;
-            this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.previousButton.Location = new System.Drawing.Point(0, 0);
-            this.previousButton.Margin = new System.Windows.Forms.Padding(0);
-            this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(32, 665);
-            this.previousButton.TabIndex = 18;
-            this.previousButton.UseVisualStyleBackColor = false;
-            // 
-            // sideBarMenu
-            // 
-            this.sideBarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.sideBarMenu.Controls.Add(this.navIconImages);
-            this.sideBarMenu.Controls.Add(this.iconGalButton);
-            this.sideBarMenu.Controls.Add(this.button3);
-            this.sideBarMenu.Controls.Add(this.stopProgram);
-            this.sideBarMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideBarMenu.Location = new System.Drawing.Point(0, 25);
-            this.sideBarMenu.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.sideBarMenu.Name = "sideBarMenu";
-            this.sideBarMenu.Size = new System.Drawing.Size(240, 665);
-            this.sideBarMenu.TabIndex = 1;
-            // 
-            // navIconImages
-            // 
-            this.navIconImages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.navIconImages.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navIconImages.FlatAppearance.BorderSize = 0;
-            this.navIconImages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navIconImages.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.navIconImages.ForeColor = System.Drawing.Color.White;
-            this.navIconImages.Image = global::DesktopSkin.assetImages.start;
-            this.navIconImages.Location = new System.Drawing.Point(0, 133);
-            this.navIconImages.Name = "navIconImages";
-            this.navIconImages.Size = new System.Drawing.Size(240, 66);
-            this.navIconImages.TabIndex = 3;
-            this.navIconImages.Text = "Navigation Icon Gallery";
-            this.navIconImages.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.navIconImages.UseVisualStyleBackColor = true;
-            // 
-            // iconGalButton
-            // 
-            this.iconGalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.iconGalButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconGalButton.FlatAppearance.BorderSize = 0;
-            this.iconGalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconGalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.iconGalButton.ForeColor = System.Drawing.Color.White;
-            this.iconGalButton.Image = global::DesktopSkin.assetImages.apps;
-            this.iconGalButton.Location = new System.Drawing.Point(0, 67);
-            this.iconGalButton.Name = "iconGalButton";
-            this.iconGalButton.Size = new System.Drawing.Size(240, 66);
-            this.iconGalButton.TabIndex = 2;
-            this.iconGalButton.Text = "Icon Gallery";
-            this.iconGalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconGalButton.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(240, 67);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Settings";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // stopProgram
-            // 
-            this.stopProgram.FlatAppearance.BorderSize = 0;
-            this.stopProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stopProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.stopProgram.ForeColor = System.Drawing.Color.White;
-            this.stopProgram.Location = new System.Drawing.Point(0, 612);
-            this.stopProgram.Name = "stopProgram";
-            this.stopProgram.Size = new System.Drawing.Size(240, 41);
-            this.stopProgram.TabIndex = 0;
-            this.stopProgram.Text = "End Me";
-            this.stopProgram.UseVisualStyleBackColor = true;
-            // 
-            // iconGalTimer
-            // 
-            this.iconGalTimer.Interval = 20;
-            this.iconGalTimer.Tick += new System.EventHandler(this.iconGalAnimation);
-            // 
             // iconDisplay15
             // 
             this.iconDisplay15.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1170,30 +1085,115 @@
             this.iconDisplay1.Size = new System.Drawing.Size(1, 175);
             this.iconDisplay1.TabIndex = 0;
             // 
-            // navColorTXT
+            // nextButton
             // 
-            this.navColorTXT.Location = new System.Drawing.Point(146, 81);
-            this.navColorTXT.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.navColorTXT.Name = "navColorTXT";
-            this.navColorTXT.Size = new System.Drawing.Size(153, 20);
-            this.navColorTXT.TabIndex = 25;
-            this.navColorTXT.Visible = false;
+            this.nextButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nextButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nextButton.FlatAppearance.BorderSize = 0;
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextButton.Location = new System.Drawing.Point(-22, 0);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(0);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(32, 665);
+            this.nextButton.TabIndex = 25;
+            this.nextButton.UseVisualStyleBackColor = false;
             // 
-            // navColor
+            // previousButton
             // 
-            this.navColor.AutoSize = true;
-            this.navColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.navColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.navColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.navColor.Location = new System.Drawing.Point(32, 75);
-            this.navColor.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
-            this.navColor.Name = "navColor";
-            this.navColor.Size = new System.Drawing.Size(104, 31);
-            this.navColor.TabIndex = 24;
-            this.navColor.Text = "NavBar Color";
-            this.navColor.UseVisualStyleBackColor = true;
-            this.navColor.Visible = false;
+            this.previousButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.previousButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.previousButton.FlatAppearance.BorderSize = 0;
+            this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previousButton.Location = new System.Drawing.Point(0, 0);
+            this.previousButton.Margin = new System.Windows.Forms.Padding(0);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(32, 665);
+            this.previousButton.TabIndex = 18;
+            this.previousButton.UseVisualStyleBackColor = false;
+            // 
+            // sideBarMenu
+            // 
+            this.sideBarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.sideBarMenu.Controls.Add(this.navIconImages);
+            this.sideBarMenu.Controls.Add(this.iconGalButton);
+            this.sideBarMenu.Controls.Add(this.button3);
+            this.sideBarMenu.Controls.Add(this.stopProgram);
+            this.sideBarMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBarMenu.Location = new System.Drawing.Point(0, 25);
+            this.sideBarMenu.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.sideBarMenu.Name = "sideBarMenu";
+            this.sideBarMenu.Size = new System.Drawing.Size(240, 665);
+            this.sideBarMenu.TabIndex = 1;
+            // 
+            // navIconImages
+            // 
+            this.navIconImages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.navIconImages.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navIconImages.FlatAppearance.BorderSize = 0;
+            this.navIconImages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navIconImages.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.navIconImages.ForeColor = System.Drawing.Color.White;
+            this.navIconImages.Image = global::DesktopSkin.assetImages.start;
+            this.navIconImages.Location = new System.Drawing.Point(0, 133);
+            this.navIconImages.Name = "navIconImages";
+            this.navIconImages.Size = new System.Drawing.Size(240, 66);
+            this.navIconImages.TabIndex = 3;
+            this.navIconImages.Text = "Navigation Icon Gallery";
+            this.navIconImages.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.navIconImages.UseVisualStyleBackColor = true;
+            // 
+            // iconGalButton
+            // 
+            this.iconGalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iconGalButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconGalButton.FlatAppearance.BorderSize = 0;
+            this.iconGalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconGalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.iconGalButton.ForeColor = System.Drawing.Color.White;
+            this.iconGalButton.Image = global::DesktopSkin.assetImages.apps;
+            this.iconGalButton.Location = new System.Drawing.Point(0, 67);
+            this.iconGalButton.Name = "iconGalButton";
+            this.iconGalButton.Size = new System.Drawing.Size(240, 66);
+            this.iconGalButton.TabIndex = 2;
+            this.iconGalButton.Text = "Icon Gallery";
+            this.iconGalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconGalButton.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(240, 67);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Settings";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // stopProgram
+            // 
+            this.stopProgram.FlatAppearance.BorderSize = 0;
+            this.stopProgram.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stopProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.stopProgram.ForeColor = System.Drawing.Color.White;
+            this.stopProgram.Location = new System.Drawing.Point(0, 612);
+            this.stopProgram.Name = "stopProgram";
+            this.stopProgram.Size = new System.Drawing.Size(240, 41);
+            this.stopProgram.TabIndex = 0;
+            this.stopProgram.Text = "End Me";
+            this.stopProgram.UseVisualStyleBackColor = true;
+            // 
+            // iconGalTimer
+            // 
+            this.iconGalTimer.Interval = 20;
+            this.iconGalTimer.Tick += new System.EventHandler(this.iconGalAnimation);
             // 
             // Form2
             // 
