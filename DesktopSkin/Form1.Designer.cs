@@ -634,7 +634,6 @@
             // settings
             // 
             this.settings.BackColor = System.Drawing.Color.Transparent;
-            this.settings.BackgroundImage = global::DesktopSkin.icons.control;
             this.settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.settings.Location = new System.Drawing.Point(1083, 0);
             this.settings.Margin = new System.Windows.Forms.Padding(0);
@@ -748,12 +747,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.blurBackground);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

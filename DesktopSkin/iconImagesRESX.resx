@@ -148,9 +148,6 @@
   <data name="Applications" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Applications.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="apps" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\apps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Arc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Arc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -265,9 +262,6 @@
   <data name="Console" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Console.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="control" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\control.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Cookie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Cookie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -340,9 +334,6 @@
   <data name="Dribbble" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Dribbble.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="drive" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\drive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Dropbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Dropbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -351,9 +342,6 @@
   </data>
   <data name="Duolingo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Duolingo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\earth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ebay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ebay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -393,9 +381,6 @@
   </data>
   <data name="Feedly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Feedly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="file" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FileExplorer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\FileExplorer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -444,9 +429,6 @@
   </data>
   <data name="Gelbooru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Gelbooru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gfolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\gfolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Gmail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -507,9 +489,6 @@
   </data>
   <data name="HDD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\HDD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hexagons" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\hexagons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hiFive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\hiFive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -709,9 +688,6 @@
   <data name="Periscope" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Periscope.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Phoenix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Phoenix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -793,9 +769,6 @@
   <data name="Recorder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Recorder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="recycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\recycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Renren" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Renren.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -817,14 +790,8 @@
   <data name="Satellite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Satellite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Server" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Server.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -886,9 +853,6 @@
   <data name="StarredFolder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\StarredFolder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Stumbleupon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Stumbleupon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -900,12 +864,6 @@
   </data>
   <data name="Swords" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Swords.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="task" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\task.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="taskview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\taskview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Teamspeak" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Teamspeak.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -921,9 +879,6 @@
   </data>
   <data name="TheOnion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\TheOnion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thispc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\thispc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Thunderbird" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Thunderbird.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -942,9 +897,6 @@
   </data>
   <data name="Trello" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Trello.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="triangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\triangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tudou" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Tudou.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

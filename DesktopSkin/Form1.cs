@@ -144,7 +144,7 @@ namespace DesktopSkin
 
         public Image readJson_navIcons(int buttonNum)
         {
-            return (Image)icons.ResourceManager.GetObject(jsonConfig.NavBarIcons[buttonNum]);
+            return (Image)navIconImagesRESX.ResourceManager.GetObject(jsonConfig.NavBarIcons[buttonNum]);
         }
         public string readJson_navIconsFilename(int buttonNum)
         {
@@ -154,11 +154,11 @@ namespace DesktopSkin
 
         public Image readJson_mouseoverImage(int currentNavMenu, int panel)
         {
-            return (Image)mouseoverImages.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][1]);
+            return (Image)mouseoverImagesRESX.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][1]);
         }
         public Image readJson_iconImages(int currentNavMenu, int panel)
         {
-            return (Image)icons.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][2]);
+            return (Image)iconImagesRESX.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][2]);
         }
 
         public string readJson_iconName(int currentNavMenu, int panel)
@@ -517,6 +517,13 @@ namespace DesktopSkin
             this.BackgroundImage = bmpScreenshot;
         }
 
+        //private void screenshot(object sender, EventArgs e)
+        //{
+        //    activationBar.Visible = false;
+        //    blurBackground.BackColor = Color.Transparent;
+        //    this.BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/backgroundPic.png");
+        //}
+
         public void timer_Tick(object sender, EventArgs e)
         {
             labelTime.Text = DateTime.Now.ToString("HH:mm");
@@ -534,7 +541,7 @@ namespace DesktopSkin
         {
             blurBackground.BackColor = this.TransparencyKey;
 
-            clockTimer.Stop();
+            // clockTimer.Stop();
             clock.Visible = false;
             labelTime.Visible = false;
             labelSeconds.Visible = false;

@@ -22,14 +22,14 @@ namespace DesktopSkin {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class icons {
+    internal class iconImagesRESX {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal icons() {
+        internal iconImagesRESX() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace DesktopSkin {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DesktopSkin.icons", typeof(icons).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DesktopSkin.iconImagesRESX", typeof(iconImagesRESX).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -3413,16 +3413,6 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap apps {
-            get {
-                object obj = ResourceManager.GetObject("apps", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Arc {
             get {
                 object obj = ResourceManager.GetObject("Arc", resourceCulture);
@@ -3803,16 +3793,6 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap control {
-            get {
-                object obj = ResourceManager.GetObject("control", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Cookie {
             get {
                 object obj = ResourceManager.GetObject("Cookie", resourceCulture);
@@ -4053,16 +4033,6 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap drive {
-            get {
-                object obj = ResourceManager.GetObject("drive", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Dropbox {
             get {
                 object obj = ResourceManager.GetObject("Dropbox", resourceCulture);
@@ -4086,16 +4056,6 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap Duolingo {
             get {
                 object obj = ResourceManager.GetObject("Duolingo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap earth {
-            get {
-                object obj = ResourceManager.GetObject("earth", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -4226,16 +4186,6 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap Feedly {
             get {
                 object obj = ResourceManager.GetObject("Feedly", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap file {
-            get {
-                object obj = ResourceManager.GetObject("file", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -4396,16 +4346,6 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap Gelbooru {
             get {
                 object obj = ResourceManager.GetObject("Gelbooru", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gfolder {
-            get {
-                object obj = ResourceManager.GetObject("gfolder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -4606,16 +4546,6 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap HDD {
             get {
                 object obj = ResourceManager.GetObject("HDD", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hexagons {
-            get {
-                object obj = ResourceManager.GetObject("hexagons", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -5283,16 +5213,6 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap personal {
-            get {
-                object obj = ResourceManager.GetObject("personal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Phoenix {
             get {
                 object obj = ResourceManager.GetObject("Phoenix", resourceCulture);
@@ -5563,16 +5483,6 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap recycle {
-            get {
-                object obj = ResourceManager.GetObject("recycle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Renren {
             get {
                 object obj = ResourceManager.GetObject("Renren", resourceCulture);
@@ -5643,29 +5553,9 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap search {
-            get {
-                object obj = ResourceManager.GetObject("search", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Server {
             get {
                 object obj = ResourceManager.GetObject("Server", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap setting {
-            get {
-                object obj = ResourceManager.GetObject("setting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -5873,16 +5763,6 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap start {
-            get {
-                object obj = ResourceManager.GetObject("start", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Stumbleupon {
             get {
                 object obj = ResourceManager.GetObject("Stumbleupon", resourceCulture);
@@ -5916,26 +5796,6 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap Swords {
             get {
                 object obj = ResourceManager.GetObject("Swords", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap task {
-            get {
-                object obj = ResourceManager.GetObject("task", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap taskview {
-            get {
-                object obj = ResourceManager.GetObject("taskview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -5986,16 +5846,6 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap TheOnion {
             get {
                 object obj = ResourceManager.GetObject("TheOnion", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap thispc {
-            get {
-                object obj = ResourceManager.GetObject("thispc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -6056,16 +5906,6 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap Trello {
             get {
                 object obj = ResourceManager.GetObject("Trello", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap triangle {
-            get {
-                object obj = ResourceManager.GetObject("triangle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.Globalization;
 using System.IO;
+using System.Linq;
+using System.Resources;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+
 
 namespace DesktopSkin
 {
@@ -15,6 +20,7 @@ namespace DesktopSkin
 #pragma warning disable CS0414 // The field 'Form2.currentPanelNum' is assigned but its value is never used
         int currentPanelNum = 0;
 #pragma warning restore CS0414 // The field 'Form2.currentPanelNum' is assigned but its value is never used
+        int numUsedImage = 0;
 
         List<Panel> panels;
         List<Panel> decorBars;
@@ -26,20 +32,21 @@ namespace DesktopSkin
         List<Panel> navBarIcons;
         List<Button> navBarNames;
 
+        List<IconDisplay> iconDisplays;
+        List<string> iconNamesResx = new List<string>();
         int iconBoxesHeight;
+
+        int iconGalWidth, iconGalHeight;
 
         Form1 frm = new Form1();
         public Form2()
         {
             InitializeComponent();
-        }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            frm.Show();
-            frm.Hide();
+            iconGalWidth = iconGallery.Width;
+            iconGalHeight = iconGallery.Height;
 
-            timer.Start();
+            iconGallery.Size = new Size(0, iconGalHeight);
 
             iconBoxesHeight = iconBox1.Height;
 
@@ -65,9 +72,25 @@ namespace DesktopSkin
             // navBarNames
             navBarNames = new List<Button> { navBarName1, navBarName2, navBarName3, navBarName4 };
 
+            // IconDisplays
+            iconDisplays = new List<IconDisplay> { iconDisplay1, iconDisplay2, iconDisplay3, iconDisplay4, iconDisplay5,
+                                                    iconDisplay6, iconDisplay7, iconDisplay8, iconDisplay9, iconDisplay10,
+                                                    iconDisplay11, iconDisplay12, iconDisplay13, iconDisplay14, iconDisplay15 };
 
             navBarPanel.BackColor = Color.FromArgb(125, Color.Black);
 
+            enumerateIconsRes_Gal();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            
+            frm.Show();
+            frm.Hide();
+
+            timer.Start();
+
+            
 
             for (int i = 0; i < navBarButtons.Count; i++)
             {
@@ -115,8 +138,10 @@ namespace DesktopSkin
                 navBarNames[i].Click += new EventHandler(this.navBarButtons_Click);
             }
 
-            iconHolder1.Icon = frm.readJson_iconImages(currentNavMenu, 4);
-            iconHolder1.IconText = frm.readJson_iconName(currentNavMenu, 4);
+            nextButton.Click += new EventHandler(nextButtonClick);
+            previousButton.Click += new EventHandler(previousButtonClick);
+
+            iconGalButton.Click += new EventHandler(iconGalAnimation);
 
             selectedNav.Click += new EventHandler(intializeLabels_Nav);
 
@@ -140,12 +165,16 @@ namespace DesktopSkin
             selectedNav.FlatStyle = FlatStyle.Standard;
             labelNavIcon.Visible = true;
             currentNavIconName.Visible = true;
+
+            navColor.Visible = true;
+            navColorTXT.Visible = true;
             navInfo();
         }
 
         private void navInfo()
         {
             currentNavIconName.Text = frm.readJson_navIconsFilename(currentNavMenu);
+            navColorTXT.Text = navBarPanel.BackColor.ToString();
         }
 
         private void navBarButtons_hover(object sender, EventArgs e)
@@ -303,7 +332,6 @@ namespace DesktopSkin
                 }
             }
 
-
             if (panel1.Tag == currentPanel)
             {
                 // Panel 1
@@ -430,6 +458,71 @@ namespace DesktopSkin
             labelSeconds.Text = DateTime.Now.ToString("ss");
             labelDate.Text = DateTime.Now.ToString("MMM dd yyyy");
             labelDay.Text = DateTime.Now.ToString("dddd");
+        }
+
+        
+
+        private void iconGalAnimation(object sender, EventArgs e)
+        {
+            iconGalTimer.Start();
+            int iconGalCurrentWidth = iconGallery.Width;
+            if (iconGalCurrentWidth < iconGalWidth)
+            {
+                iconGallery.Size = new Size(iconGalCurrentWidth + (iconGalWidth / 14), iconGalHeight);
+            }
+            else
+            {
+                iconGalTimer.Stop();
+                iconGallery.Size = new Size(iconGalWidth, iconGalHeight);
+                nextButtonClick(sender, e);
+            }
+        }
+
+
+        private void nextButtonClick(object sender, EventArgs e)
+        {
+            int numImages = iconNamesResx.Count;
+            
+            for (int i = 0; i < iconDisplays.Count; i++)
+            {
+                if (numUsedImage < numImages)
+                {
+                    iconDisplays[i].Icon = (Image)iconImagesRESX.ResourceManager.GetObject(iconNamesResx[numUsedImage]);
+                    iconDisplays[i].IconText = iconNamesResx[numUsedImage];
+                    numUsedImage++;
+                }
+            }
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Next");
+            Console.WriteLine("numUsedImage: " + numUsedImage);
+        }
+
+        private void previousButtonClick(object sender, EventArgs e)
+        {
+            if (numUsedImage > iconDisplays.Count)
+            {
+                numUsedImage -= iconDisplays.Count * 2;
+                nextButtonClick(sender, e);
+            }
+            
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Previous");
+            Console.WriteLine("numUsedImage: " + numUsedImage);
+        }
+
+        private void enumerateIconsRes_Gal()
+        {
+            ResourceSet resourceSet =
+                iconImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+
+            foreach (DictionaryEntry entry in resourceSet)
+            {
+                string resourceKey = entry.Key.ToString();
+
+                iconNamesResx.Add(resourceKey);
+                Console.WriteLine(resourceKey);
+            }
+            //Console.WriteLine(iconNamesResx.Count);
         }
     }
 }
