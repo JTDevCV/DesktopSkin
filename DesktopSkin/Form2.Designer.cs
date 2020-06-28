@@ -74,10 +74,15 @@
             this.iconName4 = new System.Windows.Forms.Button();
             this.iconBox4 = new System.Windows.Forms.Panel();
             this.settingsMenu = new System.Windows.Forms.Panel();
-            this.navColorTXT = new System.Windows.Forms.TextBox();
-            this.navColor = new System.Windows.Forms.Button();
-            this.currentNavIconName = new System.Windows.Forms.TextBox();
-            this.labelNavIcon = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.settingsLabel3 = new System.Windows.Forms.Button();
+            this.settingsTxt3 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.settingsLabel2 = new System.Windows.Forms.Button();
+            this.settingsTxt2 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.settingsLabel1 = new System.Windows.Forms.Button();
+            this.settingsTxt1 = new System.Windows.Forms.TextBox();
             this.dividend = new System.Windows.Forms.Panel();
             this.selectedPanel = new System.Windows.Forms.Button();
             this.selectedNav = new System.Windows.Forms.Button();
@@ -87,34 +92,16 @@
             this.labelDate = new System.Windows.Forms.Label();
             this.labelSeconds = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.backGroundPanel = new System.Windows.Forms.Panel();
-            this.iconGallery = new System.Windows.Forms.Panel();
-            this.tableLayoutIconGal = new System.Windows.Forms.TableLayoutPanel();
-            this.iconDisplay15 = new DesktopSkin.IconDisplay();
-            this.iconDisplay14 = new DesktopSkin.IconDisplay();
-            this.iconDisplay13 = new DesktopSkin.IconDisplay();
-            this.iconDisplay12 = new DesktopSkin.IconDisplay();
-            this.iconDisplay11 = new DesktopSkin.IconDisplay();
-            this.iconDisplay10 = new DesktopSkin.IconDisplay();
-            this.iconDisplay9 = new DesktopSkin.IconDisplay();
-            this.iconDisplay8 = new DesktopSkin.IconDisplay();
-            this.iconDisplay7 = new DesktopSkin.IconDisplay();
-            this.iconDisplay6 = new DesktopSkin.IconDisplay();
-            this.iconDisplay5 = new DesktopSkin.IconDisplay();
-            this.iconDisplay4 = new DesktopSkin.IconDisplay();
-            this.iconDisplay3 = new DesktopSkin.IconDisplay();
-            this.iconDisplay2 = new DesktopSkin.IconDisplay();
-            this.iconDisplay1 = new DesktopSkin.IconDisplay();
-            this.nextButton = new System.Windows.Forms.Button();
-            this.previousButton = new System.Windows.Forms.Button();
             this.sideBarMenu = new System.Windows.Forms.Panel();
             this.navIconImages = new System.Windows.Forms.Button();
             this.iconGalButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.stopProgram = new System.Windows.Forms.Button();
             this.iconGalTimer = new System.Windows.Forms.Timer(this.components);
+            this.iconGallery = new DesktopSkin.IconGallery();
             this.menuBar.SuspendLayout();
             this.displayContent.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,10 +116,11 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.settingsMenu.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.clock.SuspendLayout();
             this.backGroundPanel.SuspendLayout();
-            this.iconGallery.SuspendLayout();
-            this.tableLayoutIconGal.SuspendLayout();
             this.sideBarMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -682,10 +670,9 @@
             // 
             // settingsMenu
             // 
-            this.settingsMenu.Controls.Add(this.navColorTXT);
-            this.settingsMenu.Controls.Add(this.navColor);
-            this.settingsMenu.Controls.Add(this.currentNavIconName);
-            this.settingsMenu.Controls.Add(this.labelNavIcon);
+            this.settingsMenu.Controls.Add(this.tableLayoutPanel3);
+            this.settingsMenu.Controls.Add(this.tableLayoutPanel2);
+            this.settingsMenu.Controls.Add(this.tableLayoutPanel1);
             this.settingsMenu.Controls.Add(this.dividend);
             this.settingsMenu.Controls.Add(this.selectedPanel);
             this.settingsMenu.Controls.Add(this.selectedNav);
@@ -696,55 +683,133 @@
             this.settingsMenu.Size = new System.Drawing.Size(948, 213);
             this.settingsMenu.TabIndex = 15;
             // 
-            // navColorTXT
+            // tableLayoutPanel3
             // 
-            this.navColorTXT.Location = new System.Drawing.Point(146, 81);
-            this.navColorTXT.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.navColorTXT.Name = "navColorTXT";
-            this.navColorTXT.Size = new System.Drawing.Size(153, 20);
-            this.navColorTXT.TabIndex = 25;
-            this.navColorTXT.Visible = false;
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.settingsLabel3, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.settingsTxt3, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(415, 67);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(380, 42);
+            this.tableLayoutPanel3.TabIndex = 32;
             // 
-            // navColor
+            // settingsLabel3
             // 
-            this.navColor.AutoSize = true;
-            this.navColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.navColor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.navColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.navColor.Location = new System.Drawing.Point(32, 75);
-            this.navColor.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
-            this.navColor.Name = "navColor";
-            this.navColor.Size = new System.Drawing.Size(104, 31);
-            this.navColor.TabIndex = 24;
-            this.navColor.Text = "NavBar Color";
-            this.navColor.UseVisualStyleBackColor = true;
-            this.navColor.Visible = false;
+            this.settingsLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.settingsLabel3.AutoSize = true;
+            this.settingsLabel3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.settingsLabel3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.settingsLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.settingsLabel3.Location = new System.Drawing.Point(28, 5);
+            this.settingsLabel3.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.settingsLabel3.Name = "settingsLabel3";
+            this.settingsLabel3.Size = new System.Drawing.Size(132, 31);
+            this.settingsLabel3.TabIndex = 29;
+            this.settingsLabel3.Text = "Mouseover Image";
+            this.settingsLabel3.UseVisualStyleBackColor = true;
+            this.settingsLabel3.Visible = false;
             // 
-            // currentNavIconName
+            // settingsTxt3
             // 
-            this.currentNavIconName.Location = new System.Drawing.Point(117, 133);
-            this.currentNavIconName.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.currentNavIconName.Name = "currentNavIconName";
-            this.currentNavIconName.Size = new System.Drawing.Size(153, 20);
-            this.currentNavIconName.TabIndex = 23;
-            this.currentNavIconName.Visible = false;
+            this.settingsTxt3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.settingsTxt3.Location = new System.Drawing.Point(209, 11);
+            this.settingsTxt3.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.settingsTxt3.Name = "settingsTxt3";
+            this.settingsTxt3.Size = new System.Drawing.Size(153, 20);
+            this.settingsTxt3.TabIndex = 29;
+            this.settingsTxt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.settingsTxt3.Visible = false;
             // 
-            // labelNavIcon
+            // tableLayoutPanel2
             // 
-            this.labelNavIcon.AutoSize = true;
-            this.labelNavIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.labelNavIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.labelNavIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelNavIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.labelNavIcon.Location = new System.Drawing.Point(32, 127);
-            this.labelNavIcon.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
-            this.labelNavIcon.Name = "labelNavIcon";
-            this.labelNavIcon.Size = new System.Drawing.Size(75, 31);
-            this.labelNavIcon.TabIndex = 22;
-            this.labelNavIcon.Text = "Nav Icon";
-            this.labelNavIcon.UseVisualStyleBackColor = true;
-            this.labelNavIcon.Visible = false;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.settingsLabel2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.settingsTxt2, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(29, 115);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(380, 42);
+            this.tableLayoutPanel2.TabIndex = 31;
+            // 
+            // settingsLabel2
+            // 
+            this.settingsLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.settingsLabel2.AutoSize = true;
+            this.settingsLabel2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.settingsLabel2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.settingsLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.settingsLabel2.Location = new System.Drawing.Point(42, 6);
+            this.settingsLabel2.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.settingsLabel2.Name = "settingsLabel2";
+            this.settingsLabel2.Size = new System.Drawing.Size(104, 29);
+            this.settingsLabel2.TabIndex = 24;
+            this.settingsLabel2.Text = "NavBar Color";
+            this.settingsLabel2.UseVisualStyleBackColor = true;
+            this.settingsLabel2.Visible = false;
+            // 
+            // settingsTxt2
+            // 
+            this.settingsTxt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.settingsTxt2.Location = new System.Drawing.Point(209, 11);
+            this.settingsTxt2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.settingsTxt2.Name = "settingsTxt2";
+            this.settingsTxt2.Size = new System.Drawing.Size(153, 20);
+            this.settingsTxt2.TabIndex = 25;
+            this.settingsTxt2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.settingsTxt2.Visible = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.settingsLabel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.settingsTxt1, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 67);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(380, 42);
+            this.tableLayoutPanel1.TabIndex = 30;
+            // 
+            // settingsLabel1
+            // 
+            this.settingsLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.settingsLabel1.AutoSize = true;
+            this.settingsLabel1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.settingsLabel1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.settingsLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.settingsLabel1.Location = new System.Drawing.Point(56, 5);
+            this.settingsLabel1.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.settingsLabel1.Name = "settingsLabel1";
+            this.settingsLabel1.Size = new System.Drawing.Size(75, 31);
+            this.settingsLabel1.TabIndex = 29;
+            this.settingsLabel1.Text = "Nav Icon";
+            this.settingsLabel1.UseVisualStyleBackColor = true;
+            this.settingsLabel1.Visible = false;
+            // 
+            // settingsTxt1
+            // 
+            this.settingsTxt1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.settingsTxt1.Location = new System.Drawing.Point(209, 11);
+            this.settingsTxt1.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.settingsTxt1.Name = "settingsTxt1";
+            this.settingsTxt1.Size = new System.Drawing.Size(153, 20);
+            this.settingsTxt1.TabIndex = 29;
+            this.settingsTxt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.settingsTxt1.Visible = false;
             // 
             // dividend
             // 
@@ -851,15 +916,15 @@
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "22:22";
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.Location = new System.Drawing.Point(1032, 643);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 35);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.saveButton.Location = new System.Drawing.Point(1032, 643);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(3, 3, 5, 3);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(77, 35);
+            this.saveButton.TabIndex = 18;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -876,7 +941,7 @@
             this.backGroundPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.backGroundPanel.Controls.Add(this.iconGallery);
             this.backGroundPanel.Controls.Add(this.button2);
-            this.backGroundPanel.Controls.Add(this.button1);
+            this.backGroundPanel.Controls.Add(this.saveButton);
             this.backGroundPanel.Controls.Add(this.clock);
             this.backGroundPanel.Controls.Add(this.settingsMenu);
             this.backGroundPanel.Controls.Add(this.displayContent);
@@ -887,229 +952,6 @@
             this.backGroundPanel.Name = "backGroundPanel";
             this.backGroundPanel.Size = new System.Drawing.Size(1206, 690);
             this.backGroundPanel.TabIndex = 2;
-            // 
-            // iconGallery
-            // 
-            this.iconGallery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.iconGallery.Controls.Add(this.tableLayoutIconGal);
-            this.iconGallery.Controls.Add(this.nextButton);
-            this.iconGallery.Controls.Add(this.previousButton);
-            this.iconGallery.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconGallery.Location = new System.Drawing.Point(240, 25);
-            this.iconGallery.Margin = new System.Windows.Forms.Padding(0);
-            this.iconGallery.Name = "iconGallery";
-            this.iconGallery.Size = new System.Drawing.Size(10, 665);
-            this.iconGallery.TabIndex = 22;
-            // 
-            // tableLayoutIconGal
-            // 
-            this.tableLayoutIconGal.ColumnCount = 5;
-            this.tableLayoutIconGal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutIconGal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutIconGal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutIconGal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutIconGal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay15, 4, 2);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay14, 3, 2);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay13, 2, 2);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay12, 1, 2);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay11, 0, 2);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay10, 4, 1);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay9, 3, 1);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay8, 2, 1);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay7, 1, 1);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay6, 0, 1);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay5, 4, 0);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay4, 3, 0);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay3, 2, 0);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay2, 1, 0);
-            this.tableLayoutIconGal.Controls.Add(this.iconDisplay1, 0, 0);
-            this.tableLayoutIconGal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutIconGal.Location = new System.Drawing.Point(32, 0);
-            this.tableLayoutIconGal.Margin = new System.Windows.Forms.Padding(5);
-            this.tableLayoutIconGal.Name = "tableLayoutIconGal";
-            this.tableLayoutIconGal.RowCount = 3;
-            this.tableLayoutIconGal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutIconGal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutIconGal.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutIconGal.Size = new System.Drawing.Size(0, 665);
-            this.tableLayoutIconGal.TabIndex = 27;
-            // 
-            // iconDisplay15
-            // 
-            this.iconDisplay15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay15.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay15.Icon")));
-            this.iconDisplay15.IconText = null;
-            this.iconDisplay15.Location = new System.Drawing.Point(3, 466);
-            this.iconDisplay15.Name = "iconDisplay15";
-            this.iconDisplay15.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay15.TabIndex = 14;
-            // 
-            // iconDisplay14
-            // 
-            this.iconDisplay14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay14.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay14.Icon")));
-            this.iconDisplay14.IconText = null;
-            this.iconDisplay14.Location = new System.Drawing.Point(3, 466);
-            this.iconDisplay14.Name = "iconDisplay14";
-            this.iconDisplay14.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay14.TabIndex = 13;
-            // 
-            // iconDisplay13
-            // 
-            this.iconDisplay13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay13.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay13.Icon")));
-            this.iconDisplay13.IconText = null;
-            this.iconDisplay13.Location = new System.Drawing.Point(3, 466);
-            this.iconDisplay13.Name = "iconDisplay13";
-            this.iconDisplay13.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay13.TabIndex = 12;
-            // 
-            // iconDisplay12
-            // 
-            this.iconDisplay12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay12.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay12.Icon")));
-            this.iconDisplay12.IconText = null;
-            this.iconDisplay12.Location = new System.Drawing.Point(3, 466);
-            this.iconDisplay12.Name = "iconDisplay12";
-            this.iconDisplay12.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay12.TabIndex = 11;
-            // 
-            // iconDisplay11
-            // 
-            this.iconDisplay11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay11.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay11.Icon")));
-            this.iconDisplay11.IconText = null;
-            this.iconDisplay11.Location = new System.Drawing.Point(3, 466);
-            this.iconDisplay11.Name = "iconDisplay11";
-            this.iconDisplay11.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay11.TabIndex = 10;
-            // 
-            // iconDisplay10
-            // 
-            this.iconDisplay10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay10.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay10.Icon")));
-            this.iconDisplay10.IconText = null;
-            this.iconDisplay10.Location = new System.Drawing.Point(3, 244);
-            this.iconDisplay10.Name = "iconDisplay10";
-            this.iconDisplay10.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay10.TabIndex = 9;
-            // 
-            // iconDisplay9
-            // 
-            this.iconDisplay9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay9.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay9.Icon")));
-            this.iconDisplay9.IconText = null;
-            this.iconDisplay9.Location = new System.Drawing.Point(3, 244);
-            this.iconDisplay9.Name = "iconDisplay9";
-            this.iconDisplay9.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay9.TabIndex = 8;
-            // 
-            // iconDisplay8
-            // 
-            this.iconDisplay8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay8.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay8.Icon")));
-            this.iconDisplay8.IconText = null;
-            this.iconDisplay8.Location = new System.Drawing.Point(3, 244);
-            this.iconDisplay8.Name = "iconDisplay8";
-            this.iconDisplay8.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay8.TabIndex = 7;
-            // 
-            // iconDisplay7
-            // 
-            this.iconDisplay7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay7.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay7.Icon")));
-            this.iconDisplay7.IconText = null;
-            this.iconDisplay7.Location = new System.Drawing.Point(3, 244);
-            this.iconDisplay7.Name = "iconDisplay7";
-            this.iconDisplay7.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay7.TabIndex = 6;
-            // 
-            // iconDisplay6
-            // 
-            this.iconDisplay6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay6.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay6.Icon")));
-            this.iconDisplay6.IconText = null;
-            this.iconDisplay6.Location = new System.Drawing.Point(3, 244);
-            this.iconDisplay6.Name = "iconDisplay6";
-            this.iconDisplay6.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay6.TabIndex = 5;
-            // 
-            // iconDisplay5
-            // 
-            this.iconDisplay5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay5.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay5.Icon")));
-            this.iconDisplay5.IconText = null;
-            this.iconDisplay5.Location = new System.Drawing.Point(3, 23);
-            this.iconDisplay5.Name = "iconDisplay5";
-            this.iconDisplay5.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay5.TabIndex = 4;
-            // 
-            // iconDisplay4
-            // 
-            this.iconDisplay4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay4.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay4.Icon")));
-            this.iconDisplay4.IconText = null;
-            this.iconDisplay4.Location = new System.Drawing.Point(3, 23);
-            this.iconDisplay4.Name = "iconDisplay4";
-            this.iconDisplay4.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay4.TabIndex = 3;
-            // 
-            // iconDisplay3
-            // 
-            this.iconDisplay3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay3.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay3.Icon")));
-            this.iconDisplay3.IconText = null;
-            this.iconDisplay3.Location = new System.Drawing.Point(3, 23);
-            this.iconDisplay3.Name = "iconDisplay3";
-            this.iconDisplay3.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay3.TabIndex = 2;
-            // 
-            // iconDisplay2
-            // 
-            this.iconDisplay2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay2.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay2.Icon")));
-            this.iconDisplay2.IconText = null;
-            this.iconDisplay2.Location = new System.Drawing.Point(3, 23);
-            this.iconDisplay2.Name = "iconDisplay2";
-            this.iconDisplay2.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay2.TabIndex = 1;
-            // 
-            // iconDisplay1
-            // 
-            this.iconDisplay1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconDisplay1.Icon = ((System.Drawing.Image)(resources.GetObject("iconDisplay1.Icon")));
-            this.iconDisplay1.IconText = null;
-            this.iconDisplay1.Location = new System.Drawing.Point(3, 23);
-            this.iconDisplay1.Name = "iconDisplay1";
-            this.iconDisplay1.Size = new System.Drawing.Size(1, 175);
-            this.iconDisplay1.TabIndex = 0;
-            // 
-            // nextButton
-            // 
-            this.nextButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.nextButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.nextButton.FlatAppearance.BorderSize = 0;
-            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextButton.Location = new System.Drawing.Point(-22, 0);
-            this.nextButton.Margin = new System.Windows.Forms.Padding(0);
-            this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(32, 665);
-            this.nextButton.TabIndex = 25;
-            this.nextButton.UseVisualStyleBackColor = false;
-            // 
-            // previousButton
-            // 
-            this.previousButton.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.previousButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.previousButton.FlatAppearance.BorderSize = 0;
-            this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.previousButton.Location = new System.Drawing.Point(0, 0);
-            this.previousButton.Margin = new System.Windows.Forms.Padding(0);
-            this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(32, 665);
-            this.previousButton.TabIndex = 18;
-            this.previousButton.UseVisualStyleBackColor = false;
             // 
             // sideBarMenu
             // 
@@ -1139,6 +981,7 @@
             this.navIconImages.Size = new System.Drawing.Size(240, 66);
             this.navIconImages.TabIndex = 3;
             this.navIconImages.Text = "Navigation Icon Gallery";
+            this.navIconImages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.navIconImages.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.navIconImages.UseVisualStyleBackColor = true;
             // 
@@ -1156,6 +999,7 @@
             this.iconGalButton.Size = new System.Drawing.Size(240, 66);
             this.iconGalButton.TabIndex = 2;
             this.iconGalButton.Text = "Icon Gallery";
+            this.iconGalButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconGalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconGalButton.UseVisualStyleBackColor = true;
             // 
@@ -1193,7 +1037,16 @@
             // iconGalTimer
             // 
             this.iconGalTimer.Interval = 20;
-            this.iconGalTimer.Tick += new System.EventHandler(this.iconGalAnimation);
+            this.iconGalTimer.Tick += new System.EventHandler(this.GalleryAnimation);
+            // 
+            // iconGallery
+            // 
+            this.iconGallery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.iconGallery.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconGallery.Location = new System.Drawing.Point(240, 25);
+            this.iconGallery.Name = "iconGallery";
+            this.iconGallery.Size = new System.Drawing.Size(966, 665);
+            this.iconGallery.TabIndex = 21;
             // 
             // Form2
             // 
@@ -1222,11 +1075,15 @@
             this.panel4.ResumeLayout(false);
             this.settingsMenu.ResumeLayout(false);
             this.settingsMenu.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.clock.ResumeLayout(false);
             this.clock.PerformLayout();
             this.backGroundPanel.ResumeLayout(false);
-            this.iconGallery.ResumeLayout(false);
-            this.tableLayoutIconGal.ResumeLayout(false);
             this.sideBarMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1277,8 +1134,6 @@
         private System.Windows.Forms.Button iconName4;
         private System.Windows.Forms.Panel iconBox4;
         private System.Windows.Forms.Panel settingsMenu;
-        private System.Windows.Forms.TextBox currentNavIconName;
-        private System.Windows.Forms.Button labelNavIcon;
         private System.Windows.Forms.Panel dividend;
         private System.Windows.Forms.Button selectedPanel;
         private System.Windows.Forms.Button selectedNav;
@@ -1288,35 +1143,24 @@
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Label labelSeconds;
         private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel backGroundPanel;
         private System.Windows.Forms.Panel sideBarMenu;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button stopProgram;
         private System.Windows.Forms.Button iconGalButton;
-        private System.Windows.Forms.Panel iconGallery;
-        private System.Windows.Forms.Button previousButton;
-        private System.Windows.Forms.Button nextButton;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutIconGal;
-        private IconDisplay iconDisplay1;
-        private IconDisplay iconDisplay15;
-        private IconDisplay iconDisplay14;
-        private IconDisplay iconDisplay13;
-        private IconDisplay iconDisplay12;
-        private IconDisplay iconDisplay11;
-        private IconDisplay iconDisplay10;
-        private IconDisplay iconDisplay9;
-        private IconDisplay iconDisplay8;
-        private IconDisplay iconDisplay7;
-        private IconDisplay iconDisplay6;
-        private IconDisplay iconDisplay5;
-        private IconDisplay iconDisplay4;
-        private IconDisplay iconDisplay3;
-        private IconDisplay iconDisplay2;
         private System.Windows.Forms.Timer iconGalTimer;
         private System.Windows.Forms.Button navIconImages;
-        private System.Windows.Forms.TextBox navColorTXT;
-        private System.Windows.Forms.Button navColor;
+        private System.Windows.Forms.TextBox settingsTxt1;
+        private System.Windows.Forms.TextBox settingsTxt2;
+        private System.Windows.Forms.Button settingsLabel2;
+        private System.Windows.Forms.Button settingsLabel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button settingsLabel3;
+        private System.Windows.Forms.TextBox settingsTxt3;
+        private IconGallery iconGallery;
     }
 }
