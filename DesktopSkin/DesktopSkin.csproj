@@ -72,12 +72,6 @@
     <Compile Include="IconDisplay.Designer.cs">
       <DependentUpon>IconDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="IconGallery.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IconGallery.Designer.cs">
-      <DependentUpon>IconGallery.cs</DependentUpon>
-    </Compile>
     <Compile Include="iconImagesRESX.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,9 +102,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IconDisplay.resx">
       <DependentUpon>IconDisplay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IconGallery.resx">
-      <DependentUpon>IconGallery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="iconImagesRESX.resx">
       <Generator>ResXFileCodeGenerator</Generator>

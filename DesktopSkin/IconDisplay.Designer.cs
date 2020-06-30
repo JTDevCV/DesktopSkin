@@ -28,37 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.DisplayIcon = new System.Windows.Forms.Button();
             this.iconName = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.DisplayIcon = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel1.Controls.Add(this.iconName);
-            this.flowLayoutPanel1.Controls.Add(this.DisplayIcon);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(144, 175);
-            this.flowLayoutPanel1.TabIndex = 7;
-            // 
-            // DisplayIcon
-            // 
-            this.DisplayIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DisplayIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.DisplayIcon.FlatAppearance.BorderSize = 0;
-            this.DisplayIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DisplayIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DisplayIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DisplayIcon.Location = new System.Drawing.Point(0, 30);
-            this.DisplayIcon.Margin = new System.Windows.Forms.Padding(0);
-            this.DisplayIcon.Name = "DisplayIcon";
-            this.DisplayIcon.Size = new System.Drawing.Size(144, 144);
-            this.DisplayIcon.TabIndex = 9;
-            this.DisplayIcon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.DisplayIcon.UseVisualStyleBackColor = true;
             // 
             // iconName
             // 
@@ -76,26 +48,40 @@
             this.iconName.Margin = new System.Windows.Forms.Padding(0);
             this.iconName.Name = "iconName";
             this.iconName.Size = new System.Drawing.Size(144, 30);
-            this.iconName.TabIndex = 10;
+            this.iconName.TabIndex = 4;
             this.iconName.Text = "iconName";
             this.iconName.UseVisualStyleBackColor = false;
+            // 
+            // DisplayIcon
+            // 
+            this.DisplayIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DisplayIcon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DisplayIcon.FlatAppearance.BorderSize = 0;
+            this.DisplayIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DisplayIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DisplayIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DisplayIcon.Location = new System.Drawing.Point(0, 30);
+            this.DisplayIcon.Margin = new System.Windows.Forms.Padding(0);
+            this.DisplayIcon.Name = "DisplayIcon";
+            this.DisplayIcon.Size = new System.Drawing.Size(144, 144);
+            this.DisplayIcon.TabIndex = 5;
+            this.DisplayIcon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.DisplayIcon.UseVisualStyleBackColor = true;
             // 
             // IconDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.DisplayIcon);
+            this.Controls.Add(this.iconName);
             this.Name = "IconDisplay";
             this.Size = new System.Drawing.Size(144, 175);
             this.Load += new System.EventHandler(this.IconDisplay_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button iconName;
         private System.Windows.Forms.Button DisplayIcon;
     }

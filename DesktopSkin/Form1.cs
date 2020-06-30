@@ -31,7 +31,7 @@ namespace DesktopSkin
         private int gradientBarHeight, gradientBarWidth;
         private int animatePanelHeight, animatePanelWidth;
 
-        string jsonFile = File.ReadAllText(@"C:\Users\joshk\OneDrive\Documents\GitHub\C#\DesktopSkin\JsonProperties.json");
+        string jsonFile = File.ReadAllText(@"C:\Users\joshk\OneDrive\Documents\GitHub\C#\DesktopSkin\panelLinks.json");
         JsonConfig jsonConfig;
 
         int currentNavMenu = 0;
@@ -151,45 +151,19 @@ namespace DesktopSkin
             return jsonConfig.NavBarIcons[buttonNum];
         }
 
+
         public Image readJson_mouseoverImage(int currentNavMenu, int panel)
         {
             return (Image)mouseoverImagesRESX.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][1]);
         }
-
-        public string readJson_mouseoverImageFilename(int currentNavMenu, int panel)
-        {
-            return jsonConfig.Config[currentNavMenu][panel][1];
-        }
-
-        public void writeJson_mouseoverImageFilename(int currentNavMenu, int panel, string mouseoverFilename)
-        {
-            jsonConfig.Config[currentNavMenu][panel][1] = mouseoverFilename;
-        }
-
         public Image readJson_iconImages(int currentNavMenu, int panel)
         {
             return (Image)iconImagesRESX.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][2]);
         }
 
-        public string readJson_iconImagesFilename(int currentNavMenu, int panel)
-        {
-            return jsonConfig.Config[currentNavMenu][panel][2];
-        }
-
         public string readJson_iconName(int currentNavMenu, int panel)
         {
             return jsonConfig.Config[currentNavMenu][panel][4];
-        }
-
-
-        public void writeJson_iconImageFilename(int currentNavMenu, int panel, string iconImageFilename)
-        {
-            jsonConfig.Config[currentNavMenu][panel][2] = iconImageFilename;
-        }
-
-        public void writeJson_iconName(int currentNavMenu, int panel, string iconName)
-        {
-            jsonConfig.Config[currentNavMenu][panel][4] = iconName;
         }
 
         // ---------------------------------Settings hover, default, click
