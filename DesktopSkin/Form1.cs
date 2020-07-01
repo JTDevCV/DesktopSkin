@@ -86,11 +86,11 @@ namespace DesktopSkin
 
             // Activation 
             activationBar.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 10, 0);
-            //activationBar.MouseHover += new EventHandler(this.screenshot);
-            //activationBar.MouseHover += new EventHandler(this.menuPanel_default);
-            //activationBar.MouseHover += new EventHandler(this.startupAnimation);
+            activationBar.MouseHover += new EventHandler(this.screenshot);
+            activationBar.MouseHover += new EventHandler(this.menuPanel_default);
+            activationBar.MouseHover += new EventHandler(this.startupAnimation);
 
-            activationBar.MouseHover += new EventHandler(this.setting_click);
+            //activationBar.MouseHover += new EventHandler(this.setting_click);
 
 
             for (int i = 0; i < panels.Count; i++)
