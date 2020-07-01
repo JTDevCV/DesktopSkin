@@ -17,10 +17,8 @@ namespace DesktopSkin
     public partial class Form2 : Form
     {
         int currentNavMenu = 0;
-#pragma warning disable CS0414 // The field 'Form2.currentPanelNum' is assigned but its value is never used
         int currentPanelNum = 0;
-#pragma warning restore CS0414 // The field 'Form2.currentPanelNum' is assigned but its value is never used
-        int numUsedImage = 0;
+
 
         List<Panel> panels;
         List<Panel> decorBars;
@@ -32,16 +30,21 @@ namespace DesktopSkin
         List<Panel> navBarIcons;
         List<Button> navBarNames;
 
-        List<IconDisplay> iconDisplays;
         List<string> iconNamesResx = new List<string>();
-        int iconBoxesHeight;
+        List<string> mouseoverNamesResx = new List<string>();
 
+        int iconBoxesHeight;
         int iconGalWidth, iconGalHeight;
+
+        int dropdownHeight;
 
         Form1 frm = new Form1();
         public Form2()
         {
             InitializeComponent();
+
+            dropdownHeight = dropdownButton.Height;
+            dropdownButton.Size = new Size(GalleryButton.Width, GalleryButton.Height);
 
             iconGalWidth = iconGallery.Width;
             iconGalHeight = iconGallery.Height;
@@ -72,14 +75,10 @@ namespace DesktopSkin
             // navBarNames
             navBarNames = new List<Button> { navBarName1, navBarName2, navBarName3, navBarName4 };
 
-            // IconDisplays
-            iconDisplays = new List<IconDisplay> { iconDisplay1, iconDisplay2, iconDisplay3, iconDisplay4, iconDisplay5,
-                                                    iconDisplay6, iconDisplay7, iconDisplay8, iconDisplay9, iconDisplay10,
-                                                    iconDisplay11, iconDisplay12, iconDisplay13, iconDisplay14, iconDisplay15 };
 
             navBarPanel.BackColor = Color.FromArgb(125, Color.Black);
 
-            enumerateIconsRes_Gal();
+            enumerateRESX();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -89,8 +88,6 @@ namespace DesktopSkin
             frm.Hide();
 
             timer.Start();
-
-            
 
             for (int i = 0; i < navBarButtons.Count; i++)
             {
@@ -138,12 +135,13 @@ namespace DesktopSkin
                 navBarNames[i].Click += new EventHandler(this.navBarButtons_Click);
             }
 
-            nextButton.Click += new EventHandler(nextButtonClick);
-            previousButton.Click += new EventHandler(previousButtonClick);
+            GalleryButton.Click += new EventHandler(dropdownAnimation);
 
             iconGalButton.Click += new EventHandler(iconGalAnimation);
 
-            selectedNav.Click += new EventHandler(intializeLabels_Nav);
+            settingsButton.Click += new EventHandler(closeGallery);
+
+            saveButton.Click += new EventHandler(saveSettings);
 
             helpIcon.BackgroundImage = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/help.png");
             exitSetting.Click += new EventHandler(this.exitButton);
@@ -160,21 +158,51 @@ namespace DesktopSkin
             }
         }
 
-        private void intializeLabels_Nav(object sender, EventArgs e)
+        private void closeGallery(object sender, EventArgs e)
         {
-            selectedNav.FlatStyle = FlatStyle.Standard;
-            labelNavIcon.Visible = true;
-            currentNavIconName.Visible = true;
-
-            navColor.Visible = true;
-            navColorTXT.Visible = true;
-            navInfo();
+           iconGallery.Visible = false;
         }
 
-        private void navInfo()
+        private void saveSettings(object sender, EventArgs e)
         {
-            currentNavIconName.Text = frm.readJson_navIconsFilename(currentNavMenu);
-            navColorTXT.Text = navBarPanel.BackColor.ToString();
+            bool iconExists = false;
+            bool mouseoverExists = false;
+            for (int i = 0; i < iconNamesResx.Count; i++)
+            {
+                if (iconNamesResx[i] == settingTxtBox2.Text)
+                {
+                    Console.WriteLine("App File Exists");
+                    frm.writeJson_IconName(currentNavMenu, currentPanelNum, settingTxtBox1.Text);
+                    frm.writeJson_AppImage(currentNavMenu, currentPanelNum, settingTxtBox2.Text);
+                    iconExists = true;
+                }
+            }
+            for (int i = 0; i < mouseoverNamesResx.Count; i++)
+            {
+                if (mouseoverNamesResx[i] == settingTxtBox3.Text)
+                {
+                    Console.WriteLine("Mouseover File Exists");
+                    frm.writeJson_MouseoverImage(currentNavMenu, currentPanelNum, settingTxtBox3.Text);
+                    mouseoverExists = true;
+                }
+            }
+
+            if (!iconExists && !mouseoverExists)
+            {
+                MessageBox.Show("App Image: " + settingTxtBox2.Text + "\n" + "Mouseover Image: " + settingTxtBox3.Text + "\n------------------------------\nDOES NOT EXISTS!");
+            }
+            else
+            {
+                if (!iconExists)
+                {
+                    MessageBox.Show("App Image: " + settingTxtBox2.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                }
+                if (!mouseoverExists)
+                {
+                    MessageBox.Show("Mouseover Image: " + settingTxtBox3.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                }
+            }
+            iconDisplay();
         }
 
         private void navBarButtons_hover(object sender, EventArgs e)
@@ -236,50 +264,64 @@ namespace DesktopSkin
             }
 
             iconDisplay();
+            navSettings();
             selectedNav.Text = navBarNames[currentNavMenu].Text;
-            navInfo();
+        }
+
+        private void navSettings()
+        {
+            settings1.Visible = true;
+            settings2.Visible = true;
+            settings3.Visible = false;
+            settings4.Visible = false;
+
+            labelName1.Text = "Navigation Icon";
+            settingTxtBox1.Text = frm.readJson_navIconsFilename(currentNavMenu);
+
+            labelName2.Text = "Navigation Menu Color";
+            settingTxtBox2.Text = navBarButtons[currentNavMenu].BackColor.ToString();
         }
 
         private void iconDisplay()
         {
             // Panel 1
             iconBoxes[0].BackgroundImage = ResizeImage(
-                frm.readJson_iconImages(currentNavMenu, 0), 
+                frm.readJson_iconImage(currentNavMenu, 0), 
                 iconBoxesHeight, 
                 iconBoxesHeight);
             iconNames[0].Text = frm.readJson_iconName(currentNavMenu, 0);
 
             // Panel 2
             iconBoxes[1].BackgroundImage = ResizeImage(
-                frm.readJson_iconImages(currentNavMenu, 1),
+                frm.readJson_iconImage(currentNavMenu, 1),
                 iconBoxesHeight, 
                 iconBoxesHeight);
             iconNames[1].Text = frm.readJson_iconName(currentNavMenu, 1);
 
             // Panel 3
             iconBoxes[2].BackgroundImage = ResizeImage(
-                frm.readJson_iconImages(currentNavMenu, 2),
+                frm.readJson_iconImage(currentNavMenu, 2),
                 iconBoxesHeight, 
                 iconBoxesHeight);
             iconNames[2].Text = frm.readJson_iconName(currentNavMenu, 2);
 
             // Panel 4
             iconBoxes[3].BackgroundImage = ResizeImage(
-                frm.readJson_iconImages(currentNavMenu, 3),
+                frm.readJson_iconImage(currentNavMenu, 3),
                 iconBoxesHeight, 
                 iconBoxesHeight);
             iconNames[3].Text = frm.readJson_iconName(currentNavMenu, 3);
 
             // Panel 5
             iconBoxes[4].BackgroundImage = ResizeImage(
-                frm.readJson_iconImages(currentNavMenu, 4),
+                frm.readJson_iconImage(currentNavMenu, 4),
                 iconBoxesHeight, 
                 iconBoxesHeight);
             iconNames[4].Text = frm.readJson_iconName(currentNavMenu, 4);
 
             // Panel 6
             iconBoxes[5].BackgroundImage = ResizeImage(
-                frm.readJson_iconImages(currentNavMenu, 5),
+                frm.readJson_iconImage(currentNavMenu, 5),
                 iconBoxesHeight, 
                 iconBoxesHeight);
             iconNames[5].Text = frm.readJson_iconName(currentNavMenu, 5);
@@ -420,6 +462,24 @@ namespace DesktopSkin
             }
 
             selectedPanel.Text = frm.readJson_iconName(currentNavMenu, currentPanelNum);
+            panelSettings();
+        }
+
+        private void panelSettings()
+        {
+            settings1.Visible = true;
+            settings2.Visible = true;
+            settings3.Visible = true;
+            settings4.Visible = false;
+
+            labelName1.Text = "App Name";
+            settingTxtBox1.Text = frm.readJson_iconName(currentNavMenu, currentPanelNum);
+
+            labelName2.Text = "App Icon";
+            settingTxtBox2.Text = frm.readJson_iconImageFilename(currentNavMenu, currentPanelNum);
+
+            labelName3.Text = "Mouseover Image";
+            settingTxtBox3.Text = frm.readJson_mouseoverImageFilename(currentNavMenu, currentPanelNum);
         }
 
         public static Bitmap ResizeImage(Image image, int width, int height)
@@ -460,11 +520,10 @@ namespace DesktopSkin
             labelDay.Text = DateTime.Now.ToString("dddd");
         }
 
-        
-
         private void iconGalAnimation(object sender, EventArgs e)
         {
             iconGalTimer.Start();
+            iconGallery.Visible = true;
             int iconGalCurrentWidth = iconGallery.Width;
             if (iconGalCurrentWidth < iconGalWidth)
             {
@@ -474,43 +533,27 @@ namespace DesktopSkin
             {
                 iconGalTimer.Stop();
                 iconGallery.Size = new Size(iconGalWidth, iconGalHeight);
-                nextButtonClick(sender, e);
             }
         }
 
-
-        private void nextButtonClick(object sender, EventArgs e)
+        private void dropdownAnimation(object sender, EventArgs e)
         {
-            int numImages = iconNamesResx.Count;
+            dropdownTimer.Start();
             
-            for (int i = 0; i < iconDisplays.Count; i++)
+            if (dropdownButton.Height <= dropdownHeight)
             {
-                if (numUsedImage < numImages)
-                {
-                    iconDisplays[i].Icon = (Image)iconImagesRESX.ResourceManager.GetObject(iconNamesResx[numUsedImage]);
-                    iconDisplays[i].IconText = iconNamesResx[numUsedImage];
-                    numUsedImage++;
-                }
+                dropdownButton.Size = new Size(dropdownButton.Width, dropdownButton.Height + (dropdownHeight / 14));
             }
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Next");
-            Console.WriteLine("numUsedImage: " + numUsedImage);
-        }
-
-        private void previousButtonClick(object sender, EventArgs e)
-        {
-            if (numUsedImage > iconDisplays.Count)
+            else
             {
-                numUsedImage -= iconDisplays.Count * 2;
-                nextButtonClick(sender, e);
+                dropdownTimer.Stop();
+                dropdownButton.Size = new Size(GalleryButton.Width, dropdownHeight);
+                Console.WriteLine(dropdownButton.Height + " <= " + dropdownHeight);
             }
             
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("Previous");
-            Console.WriteLine("numUsedImage: " + numUsedImage);
         }
 
-        private void enumerateIconsRes_Gal()
+        private void enumerateRESX()
         {
             ResourceSet resourceSet =
                 iconImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
@@ -520,9 +563,18 @@ namespace DesktopSkin
                 string resourceKey = entry.Key.ToString();
 
                 iconNamesResx.Add(resourceKey);
-                Console.WriteLine(resourceKey);
             }
-            //Console.WriteLine(iconNamesResx.Count);
+
+            ResourceSet resourceSet2 =
+                mouseoverImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+
+            foreach (DictionaryEntry entry in resourceSet2)
+            {
+                string resourceKey = entry.Key.ToString();
+
+                mouseoverNamesResx.Add(resourceKey);
+                //Console.WriteLine(resourceKey);
+            }
         }
     }
 }

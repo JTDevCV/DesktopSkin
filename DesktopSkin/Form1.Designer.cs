@@ -634,6 +634,7 @@
             // settings
             // 
             this.settings.BackColor = System.Drawing.Color.Transparent;
+            this.settings.BackgroundImage = global::DesktopSkin.assetImages.control;
             this.settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.settings.Location = new System.Drawing.Point(1083, 0);
             this.settings.Margin = new System.Windows.Forms.Padding(0);

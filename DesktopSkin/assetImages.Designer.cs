@@ -103,6 +103,16 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap navigation {
+            get {
+                object obj = ResourceManager.GetObject("navigation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap recycle {
             get {
                 object obj = ResourceManager.GetObject("recycle", resourceCulture);

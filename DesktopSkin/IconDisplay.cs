@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.Runtime.CompilerServices;
 
 namespace DesktopSkin
 {
@@ -19,6 +20,12 @@ namespace DesktopSkin
         private void IconDisplay_Load(object sender, EventArgs e)
         {
             IconWidth = this.Width;
+
+            iconName.Click += new EventHandler(clipboardText);
+            DisplayIcon.Click += new EventHandler(clipboardText);
+
+            iconName.MouseLeave += new EventHandler(resetText);
+            DisplayIcon.MouseLeave += new EventHandler(resetText);
         }
 
         public static Bitmap ResizeImage(Image image, int width, int height)
@@ -26,6 +33,8 @@ namespace DesktopSkin
             if (image == null)
             {
                 image = Image.FromFile("C:/Users/joshk/OneDrive/Pictures/Module/null.png");
+                width /= 2;
+                height /= 2;
             }
             var destRect = new Rectangle(0, 0, width, height);
             var destImage = new Bitmap(width, height);
@@ -49,6 +58,24 @@ namespace DesktopSkin
             return destImage;
         }
 
+        string currentAppName;
+        bool isDefault = true;
+        private void clipboardText(object sender, EventArgs e)
+        {
+            Clipboard.SetText(_iconText);
+            currentAppName = _iconText;
+            iconName.Text = "Copied To Clipboard!";
+            isDefault = false;
+        }
+
+        private void resetText(object sender, EventArgs e)
+        {
+            if (!isDefault)
+            {
+                iconName.Text = currentAppName;
+                isDefault = true;
+            }
+        }
 
         #region Properties
         private string _iconText;

@@ -47,9 +47,9 @@
             this.iconName.Location = new System.Drawing.Point(0, 0);
             this.iconName.Margin = new System.Windows.Forms.Padding(0);
             this.iconName.Name = "iconName";
-            this.iconName.Size = new System.Drawing.Size(144, 30);
+            this.iconName.Size = new System.Drawing.Size(144, 21);
             this.iconName.TabIndex = 4;
-            this.iconName.Text = "iconName";
+            this.iconName.Text = "iconName_";
             this.iconName.UseVisualStyleBackColor = false;
             // 
             // DisplayIcon
@@ -57,10 +57,9 @@
             this.DisplayIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.DisplayIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.DisplayIcon.FlatAppearance.BorderSize = 0;
-            this.DisplayIcon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DisplayIcon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DisplayIcon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DisplayIcon.Location = new System.Drawing.Point(0, 30);
+            this.DisplayIcon.Location = new System.Drawing.Point(0, 21);
             this.DisplayIcon.Margin = new System.Windows.Forms.Padding(0);
             this.DisplayIcon.Name = "DisplayIcon";
             this.DisplayIcon.Size = new System.Drawing.Size(144, 144);
@@ -75,7 +74,7 @@
             this.Controls.Add(this.DisplayIcon);
             this.Controls.Add(this.iconName);
             this.Name = "IconDisplay";
-            this.Size = new System.Drawing.Size(144, 175);
+            this.Size = new System.Drawing.Size(144, 160);
             this.Load += new System.EventHandler(this.IconDisplay_Load);
             this.ResumeLayout(false);
 
