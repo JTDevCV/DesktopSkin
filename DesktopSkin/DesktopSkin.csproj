@@ -84,6 +84,18 @@
       <DependentUpon>iconImagesRESX.resx</DependentUpon>
     </Compile>
     <Compile Include="JsonConfig.cs" />
+    <Compile Include="MouseoverDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MouseoverDisplay.Designer.cs">
+      <DependentUpon>MouseoverDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MouseoverGallery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MouseoverGallery.Designer.cs">
+      <DependentUpon>MouseoverGallery.cs</DependentUpon>
+    </Compile>
     <Compile Include="mouseoverImagesRESX.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,6 +127,12 @@
     <EmbeddedResource Include="iconImagesRESX.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>iconImagesRESX.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MouseoverDisplay.resx">
+      <DependentUpon>MouseoverDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MouseoverGallery.resx">
+      <DependentUpon>MouseoverGallery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mouseoverImagesRESX.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -2514,6 +2532,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\navigation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

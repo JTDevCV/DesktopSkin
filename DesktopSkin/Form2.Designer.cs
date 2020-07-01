@@ -101,14 +101,14 @@
             this.sideBarMenu = new System.Windows.Forms.Panel();
             this.dropdownButton = new System.Windows.Forms.FlowLayoutPanel();
             this.GalleryButton = new System.Windows.Forms.Button();
-            this.iconGalButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.navIconImages = new System.Windows.Forms.Button();
+            this.appGalButton = new System.Windows.Forms.Button();
+            this.mouseoverGalButton = new System.Windows.Forms.Button();
+            this.navGalButton = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
             this.stopProgram = new System.Windows.Forms.Button();
-            this.iconGalTimer = new System.Windows.Forms.Timer(this.components);
             this.dropdownTimer = new System.Windows.Forms.Timer(this.components);
-            this.iconGallery = new DesktopSkin.IconGallery();
+            this.mouseoverGallery1 = new DesktopSkin.MouseoverGallery();
+            this.iconGallery1 = new DesktopSkin.IconGallery();
             this.menuBar.SuspendLayout();
             this.displayContent.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -977,7 +977,8 @@
             // backGroundPanel
             // 
             this.backGroundPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.backGroundPanel.Controls.Add(this.iconGallery);
+            this.backGroundPanel.Controls.Add(this.mouseoverGallery1);
+            this.backGroundPanel.Controls.Add(this.iconGallery1);
             this.backGroundPanel.Controls.Add(this.cancelButton);
             this.backGroundPanel.Controls.Add(this.saveButton);
             this.backGroundPanel.Controls.Add(this.clock);
@@ -1007,9 +1008,9 @@
             // dropdownButton
             // 
             this.dropdownButton.Controls.Add(this.GalleryButton);
-            this.dropdownButton.Controls.Add(this.iconGalButton);
-            this.dropdownButton.Controls.Add(this.button4);
-            this.dropdownButton.Controls.Add(this.navIconImages);
+            this.dropdownButton.Controls.Add(this.appGalButton);
+            this.dropdownButton.Controls.Add(this.mouseoverGalButton);
+            this.dropdownButton.Controls.Add(this.navGalButton);
             this.dropdownButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.dropdownButton.Location = new System.Drawing.Point(0, 67);
             this.dropdownButton.Margin = new System.Windows.Forms.Padding(0);
@@ -1034,65 +1035,65 @@
             this.GalleryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GalleryButton.UseVisualStyleBackColor = true;
             // 
-            // iconGalButton
+            // appGalButton
             // 
-            this.iconGalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.iconGalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.iconGalButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconGalButton.FlatAppearance.BorderSize = 0;
-            this.iconGalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.iconGalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconGalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.iconGalButton.ForeColor = System.Drawing.Color.White;
-            this.iconGalButton.Image = global::DesktopSkin.assetImages.apps;
-            this.iconGalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconGalButton.Location = new System.Drawing.Point(0, 65);
-            this.iconGalButton.Margin = new System.Windows.Forms.Padding(0);
-            this.iconGalButton.Name = "iconGalButton";
-            this.iconGalButton.Size = new System.Drawing.Size(240, 50);
-            this.iconGalButton.TabIndex = 5;
-            this.iconGalButton.Text = "App Icons";
-            this.iconGalButton.UseVisualStyleBackColor = false;
+            this.appGalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.appGalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.appGalButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.appGalButton.FlatAppearance.BorderSize = 0;
+            this.appGalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.appGalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.appGalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.appGalButton.ForeColor = System.Drawing.Color.White;
+            this.appGalButton.Image = global::DesktopSkin.assetImages.apps;
+            this.appGalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.appGalButton.Location = new System.Drawing.Point(0, 65);
+            this.appGalButton.Margin = new System.Windows.Forms.Padding(0);
+            this.appGalButton.Name = "appGalButton";
+            this.appGalButton.Size = new System.Drawing.Size(240, 50);
+            this.appGalButton.TabIndex = 5;
+            this.appGalButton.Text = "App Icons";
+            this.appGalButton.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // mouseoverGalButton
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::DesktopSkin.assetImages.taskview;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 115);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(240, 50);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Mouseovers";
-            this.button4.UseVisualStyleBackColor = false;
+            this.mouseoverGalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.mouseoverGalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.mouseoverGalButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mouseoverGalButton.FlatAppearance.BorderSize = 0;
+            this.mouseoverGalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mouseoverGalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mouseoverGalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.mouseoverGalButton.ForeColor = System.Drawing.Color.White;
+            this.mouseoverGalButton.Image = global::DesktopSkin.assetImages.taskview;
+            this.mouseoverGalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mouseoverGalButton.Location = new System.Drawing.Point(0, 115);
+            this.mouseoverGalButton.Margin = new System.Windows.Forms.Padding(0);
+            this.mouseoverGalButton.Name = "mouseoverGalButton";
+            this.mouseoverGalButton.Size = new System.Drawing.Size(240, 50);
+            this.mouseoverGalButton.TabIndex = 7;
+            this.mouseoverGalButton.Text = "Mouseovers";
+            this.mouseoverGalButton.UseVisualStyleBackColor = false;
             // 
-            // navIconImages
+            // navGalButton
             // 
-            this.navIconImages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.navIconImages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.navIconImages.Dock = System.Windows.Forms.DockStyle.Top;
-            this.navIconImages.FlatAppearance.BorderSize = 0;
-            this.navIconImages.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.navIconImages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navIconImages.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.navIconImages.ForeColor = System.Drawing.Color.White;
-            this.navIconImages.Image = global::DesktopSkin.assetImages.navigation;
-            this.navIconImages.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.navIconImages.Location = new System.Drawing.Point(0, 165);
-            this.navIconImages.Margin = new System.Windows.Forms.Padding(0);
-            this.navIconImages.Name = "navIconImages";
-            this.navIconImages.Size = new System.Drawing.Size(240, 50);
-            this.navIconImages.TabIndex = 8;
-            this.navIconImages.Text = "Navigations";
-            this.navIconImages.UseVisualStyleBackColor = false;
+            this.navGalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.navGalButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.navGalButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navGalButton.FlatAppearance.BorderSize = 0;
+            this.navGalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.navGalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.navGalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.navGalButton.ForeColor = System.Drawing.Color.White;
+            this.navGalButton.Image = global::DesktopSkin.assetImages.navigation;
+            this.navGalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.navGalButton.Location = new System.Drawing.Point(0, 165);
+            this.navGalButton.Margin = new System.Windows.Forms.Padding(0);
+            this.navGalButton.Name = "navGalButton";
+            this.navGalButton.Size = new System.Drawing.Size(240, 50);
+            this.navGalButton.TabIndex = 8;
+            this.navGalButton.Text = "Navigations";
+            this.navGalButton.UseVisualStyleBackColor = false;
             // 
             // settingsButton
             // 
@@ -1123,24 +1124,30 @@
             this.stopProgram.Text = "End Me";
             this.stopProgram.UseVisualStyleBackColor = true;
             // 
-            // iconGalTimer
-            // 
-            this.iconGalTimer.Interval = 20;
-            this.iconGalTimer.Tick += new System.EventHandler(this.iconGalAnimation);
-            // 
             // dropdownTimer
             // 
             this.dropdownTimer.Interval = 50;
             this.dropdownTimer.Tick += new System.EventHandler(this.dropdownAnimation);
             // 
-            // iconGallery
+            // mouseoverGallery1
             // 
-            this.iconGallery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.iconGallery.Dock = System.Windows.Forms.DockStyle.Left;
-            this.iconGallery.Location = new System.Drawing.Point(240, 25);
-            this.iconGallery.Name = "iconGallery";
-            this.iconGallery.Size = new System.Drawing.Size(966, 675);
-            this.iconGallery.TabIndex = 22;
+            this.mouseoverGallery1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.mouseoverGallery1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mouseoverGallery1.Location = new System.Drawing.Point(1206, 25);
+            this.mouseoverGallery1.Name = "mouseoverGallery1";
+            this.mouseoverGallery1.Size = new System.Drawing.Size(966, 675);
+            this.mouseoverGallery1.TabIndex = 25;
+            this.mouseoverGallery1.Visible = false;
+            // 
+            // iconGallery1
+            // 
+            this.iconGallery1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.iconGallery1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconGallery1.Location = new System.Drawing.Point(240, 25);
+            this.iconGallery1.Name = "iconGallery1";
+            this.iconGallery1.Size = new System.Drawing.Size(966, 675);
+            this.iconGallery1.TabIndex = 24;
+            this.iconGallery1.Visible = false;
             // 
             // Form2
             // 
@@ -1246,14 +1253,12 @@
         private System.Windows.Forms.Panel sideBarMenu;
         private System.Windows.Forms.Button settingsButton;
         private System.Windows.Forms.Button stopProgram;
-        private System.Windows.Forms.Timer iconGalTimer;
-        private IconGallery iconGallery;
         private System.Windows.Forms.FlowLayoutPanel dropdownButton;
         private System.Windows.Forms.Timer dropdownTimer;
         private System.Windows.Forms.Button GalleryButton;
-        private System.Windows.Forms.Button iconGalButton;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button navIconImages;
+        private System.Windows.Forms.Button appGalButton;
+        private System.Windows.Forms.Button mouseoverGalButton;
+        private System.Windows.Forms.Button navGalButton;
         private System.Windows.Forms.TableLayoutPanel settings1;
         private System.Windows.Forms.Button labelName1;
         private System.Windows.Forms.TextBox settingTxtBox1;
@@ -1266,5 +1271,7 @@
         private System.Windows.Forms.TableLayoutPanel settings3;
         private System.Windows.Forms.Button labelName3;
         private System.Windows.Forms.TextBox settingTxtBox3;
+        private MouseoverGallery mouseoverGallery1;
+        private IconGallery iconGallery1;
     }
 }

@@ -5,11 +5,8 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 using System.Resources;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 
 namespace DesktopSkin
@@ -30,11 +27,11 @@ namespace DesktopSkin
         List<Panel> navBarIcons;
         List<Button> navBarNames;
 
+        List<string> navNamesResx = new List<string>();
         List<string> iconNamesResx = new List<string>();
         List<string> mouseoverNamesResx = new List<string>();
 
         int iconBoxesHeight;
-        int iconGalWidth, iconGalHeight;
 
         int dropdownHeight;
 
@@ -45,11 +42,6 @@ namespace DesktopSkin
 
             dropdownHeight = dropdownButton.Height;
             dropdownButton.Size = new Size(GalleryButton.Width, GalleryButton.Height);
-
-            iconGalWidth = iconGallery.Width;
-            iconGalHeight = iconGallery.Height;
-
-            iconGallery.Size = new Size(0, iconGalHeight);
 
             iconBoxesHeight = iconBox1.Height;
 
@@ -137,7 +129,8 @@ namespace DesktopSkin
 
             GalleryButton.Click += new EventHandler(dropdownAnimation);
 
-            iconGalButton.Click += new EventHandler(iconGalAnimation);
+            appGalButton.Click += new EventHandler(DisplayGallery);
+            mouseoverGalButton.Click += new EventHandler(DisplayGallery);
 
             settingsButton.Click += new EventHandler(closeGallery);
 
@@ -160,49 +153,75 @@ namespace DesktopSkin
 
         private void closeGallery(object sender, EventArgs e)
         {
-           iconGallery.Visible = false;
+           iconGallery1.Visible = false;
+           mouseoverGallery1.Visible = false;
         }
 
         private void saveSettings(object sender, EventArgs e)
         {
+            bool navExists = false;
             bool iconExists = false;
             bool mouseoverExists = false;
-            for (int i = 0; i < iconNamesResx.Count; i++)
-            {
-                if (iconNamesResx[i] == settingTxtBox2.Text)
-                {
-                    Console.WriteLine("App File Exists");
-                    frm.writeJson_IconName(currentNavMenu, currentPanelNum, settingTxtBox1.Text);
-                    frm.writeJson_AppImage(currentNavMenu, currentPanelNum, settingTxtBox2.Text);
-                    iconExists = true;
-                }
-            }
-            for (int i = 0; i < mouseoverNamesResx.Count; i++)
-            {
-                if (mouseoverNamesResx[i] == settingTxtBox3.Text)
-                {
-                    Console.WriteLine("Mouseover File Exists");
-                    frm.writeJson_MouseoverImage(currentNavMenu, currentPanelNum, settingTxtBox3.Text);
-                    mouseoverExists = true;
-                }
-            }
 
-            if (!iconExists && !mouseoverExists)
+            if (labelName1.Text == "Navigation Icon")
             {
-                MessageBox.Show("App Image: " + settingTxtBox2.Text + "\n" + "Mouseover Image: " + settingTxtBox3.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                for (int i = 0; i < navNamesResx.Count; i++)
+                {
+                    if (navNamesResx[i] == settingTxtBox1.Text)
+                    {
+                        Console.WriteLine("App File Exists");
+                        frm.writeJson__NavImageFilename(currentNavMenu, settingTxtBox1.Text);
+                        navExists = true;
+                        iconDisplay();
+                    }
+                }
+                if (!navExists)
+                {
+                    MessageBox.Show("Navigation Image Filename: " + settingTxtBox1.Text + "\n------------------------------\nDOES NOT EXISTS!");
+
+                }
             }
-            else
+            else if (labelName1.Text == "App Name")
             {
-                if (!iconExists)
+                for (int i = 0; i < iconNamesResx.Count; i++)
                 {
-                    MessageBox.Show("App Image: " + settingTxtBox2.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                    if (iconNamesResx[i] == settingTxtBox2.Text)
+                    {
+                        Console.WriteLine("App File Exists");
+                        frm.writeJson_IconName(currentNavMenu, currentPanelNum, settingTxtBox1.Text);
+                        frm.writeJson_AppImage(currentNavMenu, currentPanelNum, settingTxtBox2.Text);
+                        iconExists = true;
+                        iconDisplay();
+                    }
                 }
-                if (!mouseoverExists)
+                for (int i = 0; i < mouseoverNamesResx.Count; i++)
                 {
-                    MessageBox.Show("Mouseover Image: " + settingTxtBox3.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                    if (mouseoverNamesResx[i] == settingTxtBox3.Text)
+                    {
+                        Console.WriteLine("Mouseover File Exists");
+                        frm.writeJson_MouseoverImage(currentNavMenu, currentPanelNum, settingTxtBox3.Text);
+                        mouseoverExists = true;
+                        iconDisplay();
+                    }
                 }
+
+                if (!iconExists && !mouseoverExists)
+                {
+                    MessageBox.Show("App Image: " + settingTxtBox2.Text + "\n" + "Mouseover Image: " + settingTxtBox3.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                }
+                else
+                {
+                    if (!iconExists)
+                    {
+                        MessageBox.Show("App Image: " + settingTxtBox2.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                    }
+                    if (!mouseoverExists)
+                    {
+                        MessageBox.Show("Mouseover Image: " + settingTxtBox3.Text + "\n------------------------------\nDOES NOT EXISTS!");
+                    }
+                }
+                
             }
-            iconDisplay();
         }
 
         private void navBarButtons_hover(object sender, EventArgs e)
@@ -271,60 +290,57 @@ namespace DesktopSkin
         private void navSettings()
         {
             settings1.Visible = true;
-            settings2.Visible = true;
+            settings2.Visible = false;
             settings3.Visible = false;
             settings4.Visible = false;
 
             labelName1.Text = "Navigation Icon";
             settingTxtBox1.Text = frm.readJson_navIconsFilename(currentNavMenu);
-
-            labelName2.Text = "Navigation Menu Color";
-            settingTxtBox2.Text = navBarButtons[currentNavMenu].BackColor.ToString();
         }
 
         private void iconDisplay()
         {
             // Panel 1
             iconBoxes[0].BackgroundImage = ResizeImage(
-                frm.readJson_iconImage(currentNavMenu, 0), 
+                frm.readJson_AppImage(currentNavMenu, 0), 
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[0].Text = frm.readJson_iconName(currentNavMenu, 0);
+            iconNames[0].Text = frm.readJson_AppName(currentNavMenu, 0);
 
             // Panel 2
             iconBoxes[1].BackgroundImage = ResizeImage(
-                frm.readJson_iconImage(currentNavMenu, 1),
+                frm.readJson_AppImage(currentNavMenu, 1),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[1].Text = frm.readJson_iconName(currentNavMenu, 1);
+            iconNames[1].Text = frm.readJson_AppName(currentNavMenu, 1);
 
             // Panel 3
             iconBoxes[2].BackgroundImage = ResizeImage(
-                frm.readJson_iconImage(currentNavMenu, 2),
+                frm.readJson_AppImage(currentNavMenu, 2),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[2].Text = frm.readJson_iconName(currentNavMenu, 2);
+            iconNames[2].Text = frm.readJson_AppName(currentNavMenu, 2);
 
             // Panel 4
             iconBoxes[3].BackgroundImage = ResizeImage(
-                frm.readJson_iconImage(currentNavMenu, 3),
+                frm.readJson_AppImage(currentNavMenu, 3),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[3].Text = frm.readJson_iconName(currentNavMenu, 3);
+            iconNames[3].Text = frm.readJson_AppName(currentNavMenu, 3);
 
             // Panel 5
             iconBoxes[4].BackgroundImage = ResizeImage(
-                frm.readJson_iconImage(currentNavMenu, 4),
+                frm.readJson_AppImage(currentNavMenu, 4),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[4].Text = frm.readJson_iconName(currentNavMenu, 4);
+            iconNames[4].Text = frm.readJson_AppName(currentNavMenu, 4);
 
             // Panel 6
             iconBoxes[5].BackgroundImage = ResizeImage(
-                frm.readJson_iconImage(currentNavMenu, 5),
+                frm.readJson_AppImage(currentNavMenu, 5),
                 iconBoxesHeight, 
                 iconBoxesHeight);
-            iconNames[5].Text = frm.readJson_iconName(currentNavMenu, 5);
+            iconNames[5].Text = frm.readJson_AppName(currentNavMenu, 5);
 
 
             // NavBarIcons
@@ -461,7 +477,7 @@ namespace DesktopSkin
                     break;
             }
 
-            selectedPanel.Text = frm.readJson_iconName(currentNavMenu, currentPanelNum);
+            selectedPanel.Text = frm.readJson_AppName(currentNavMenu, currentPanelNum);
             panelSettings();
         }
 
@@ -473,10 +489,10 @@ namespace DesktopSkin
             settings4.Visible = false;
 
             labelName1.Text = "App Name";
-            settingTxtBox1.Text = frm.readJson_iconName(currentNavMenu, currentPanelNum);
+            settingTxtBox1.Text = frm.readJson_AppName(currentNavMenu, currentPanelNum);
 
             labelName2.Text = "App Icon";
-            settingTxtBox2.Text = frm.readJson_iconImageFilename(currentNavMenu, currentPanelNum);
+            settingTxtBox2.Text = frm.readJson_AppImageFilename(currentNavMenu, currentPanelNum);
 
             labelName3.Text = "Mouseover Image";
             settingTxtBox3.Text = frm.readJson_mouseoverImageFilename(currentNavMenu, currentPanelNum);
@@ -520,19 +536,21 @@ namespace DesktopSkin
             labelDay.Text = DateTime.Now.ToString("dddd");
         }
 
-        private void iconGalAnimation(object sender, EventArgs e)
+        private void DisplayGallery(object sender, EventArgs e)
         {
-            iconGalTimer.Start();
-            iconGallery.Visible = true;
-            int iconGalCurrentWidth = iconGallery.Width;
-            if (iconGalCurrentWidth < iconGalWidth)
+            string clickedButton = ((Control)sender).Name;
+            Console.WriteLine(clickedButton);
+            switch (clickedButton)
             {
-                iconGallery.Size = new Size(iconGalCurrentWidth + (iconGalWidth / 14), iconGalHeight);
-            }
-            else
-            {
-                iconGalTimer.Stop();
-                iconGallery.Size = new Size(iconGalWidth, iconGalHeight);
+                case "appGalButton":
+                    iconGallery1.Visible = true;
+                    mouseoverGallery1.Visible = false;
+                    break;
+
+                case "mouseoverGalButton":
+                    iconGallery1.Visible = false;
+                    mouseoverGallery1.Visible = true;
+                    break;
             }
         }
 
@@ -548,7 +566,6 @@ namespace DesktopSkin
             {
                 dropdownTimer.Stop();
                 dropdownButton.Size = new Size(GalleryButton.Width, dropdownHeight);
-                Console.WriteLine(dropdownButton.Height + " <= " + dropdownHeight);
             }
             
         }
@@ -556,9 +573,19 @@ namespace DesktopSkin
         private void enumerateRESX()
         {
             ResourceSet resourceSet =
-                iconImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+                navIconImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
             foreach (DictionaryEntry entry in resourceSet)
+            {
+                string resourceKey = entry.Key.ToString();
+
+                navNamesResx.Add(resourceKey);
+            }
+
+            ResourceSet resourceSet1 =
+                iconImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+
+            foreach (DictionaryEntry entry in resourceSet1)
             {
                 string resourceKey = entry.Key.ToString();
 

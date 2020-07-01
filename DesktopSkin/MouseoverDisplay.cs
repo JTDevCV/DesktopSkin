@@ -1,26 +1,26 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.ComponentModel;
 
 namespace DesktopSkin
 {
-    public partial class IconDisplay : UserControl
+    public partial class MouseoverDisplay : UserControl
     {
-        public IconDisplay()
+        public MouseoverDisplay()
         {
             InitializeComponent();
         }
 
-        private void IconDisplay_Load(object sender, EventArgs e)
+        private void MouseoverDisplay_Load(object sender, EventArgs e)
         {
-            iconName.Click += new EventHandler(clipboardText);
-            DisplayIcon.Click += new EventHandler(clipboardText);
+            filenameDisplayBox.Click += new EventHandler(clipboardTxt);
+            displayBox.Click += new EventHandler(clipboardTxt);
 
-            iconName.MouseLeave += new EventHandler(resetText);
-            DisplayIcon.MouseLeave += new EventHandler(resetText);
+            filenameDisplayBox.MouseLeave += new EventHandler(resetText);
+            displayBox.MouseLeave += new EventHandler(resetText);
         }
 
         public static Bitmap ResizeImage(Image image, int width, int height)
@@ -55,11 +55,11 @@ namespace DesktopSkin
 
         string currentAppName;
         bool isDefault = true;
-        private void clipboardText(object sender, EventArgs e)
+        private void clipboardTxt(object sender, EventArgs e)
         {
-            Clipboard.SetText(_iconText);
-            currentAppName = _iconText;
-            iconName.Text = "Copied To Clipboard!";
+            Clipboard.SetText(_mouseoverFilename);
+            currentAppName = _mouseoverFilename;
+            filenameDisplayBox.Text = "Copied To Clipboard!";
             isDefault = false;
         }
 
@@ -67,30 +67,31 @@ namespace DesktopSkin
         {
             if (!isDefault)
             {
-                iconName.Text = currentAppName;
+                filenameDisplayBox.Text = currentAppName;
                 isDefault = true;
             }
         }
 
 
-        #region Properties
-        private string _iconText;
-        private Image _iconImage;
-
+        #region MyRegion
+        private string _mouseoverFilename;
+        private Image _mouseoverImage;
 
         [Category("Custom Prop")]
-        public string IconText
+        public string MouseoverFilename
         {
-            get { return _iconText; }
-            set { _iconText = value; iconName.Text = value; }
+            get { return _mouseoverFilename; }
+            set { _mouseoverFilename = value; filenameDisplayBox.Text = value; }
         }
 
         [Category("Custom Prop")]
-        public Image Icon
+        public Image MouseoverImage
         {
-            get { return _iconImage; }
-            set { _iconImage = ResizeImage(value, DisplayIcon.Width, DisplayIcon.Height); DisplayIcon.Image = ResizeImage(value, DisplayIcon.Width, DisplayIcon.Height); }
+            get { return _mouseoverImage; }
+            set { _mouseoverImage = ResizeImage(value, displayBox.Width, displayBox.Height); displayBox.Image = ResizeImage(value, displayBox.Width, displayBox.Height); }
         }
         #endregion
+
+
     }
 }

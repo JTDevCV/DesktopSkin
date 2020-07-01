@@ -127,15 +127,6 @@
   <data name="FTL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\FTL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GabeN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\GabeN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GabeN2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\GabeN2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GabeN2Episode1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\GabeN2Episode1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="GBF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\GBF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +165,6 @@
   </data>
   <data name="PlagueInc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\PlagueInc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Portal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Portal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Reddit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Reddit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -86,11 +86,11 @@ namespace DesktopSkin
 
             // Activation 
             activationBar.Location = new Point(Screen.PrimaryScreen.Bounds.Width / 10, 0);
-            activationBar.MouseHover += new EventHandler(this.screenshot);
-            activationBar.MouseHover += new EventHandler(this.menuPanel_default);
-            activationBar.MouseHover += new EventHandler(this.startupAnimation);
+            //activationBar.MouseHover += new EventHandler(this.screenshot);
+            //activationBar.MouseHover += new EventHandler(this.menuPanel_default);
+            //activationBar.MouseHover += new EventHandler(this.startupAnimation);
 
-            //activationBar.MouseHover += new EventHandler(this.setting_click);
+            activationBar.MouseHover += new EventHandler(this.setting_click);
 
 
             for (int i = 0; i < panels.Count; i++)
@@ -142,6 +142,7 @@ namespace DesktopSkin
             }
         }
 
+        // -------------------------------------- Json Images & Filename for Navigation Icons ------------
         public Image readJson_navIcons(int buttonNum)
         {
             return (Image)navIconImagesRESX.ResourceManager.GetObject(jsonConfig.NavBarIcons[buttonNum]);
@@ -151,7 +152,7 @@ namespace DesktopSkin
             return jsonConfig.NavBarIcons[buttonNum];
         }
 
-
+        // -------------------------------------- Json Images & Filename for Mouseover Images ------------
         public Image readJson_mouseoverImage(int currentNavMenu, int panel)
         {
             return (Image)mouseoverImagesRESX.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][1]);
@@ -161,21 +162,27 @@ namespace DesktopSkin
             return jsonConfig.Config[currentNavMenu][panel][1];
         }
 
-        public Image readJson_iconImage(int currentNavMenu, int panel)
+        // -------------------------------------- Json Images, Filename, & Name for App Images ------------
+        public Image readJson_AppImage(int currentNavMenu, int panel)
         {
             return (Image)iconImagesRESX.ResourceManager.GetObject(jsonConfig.Config[currentNavMenu][panel][2]);
         }
-        public string readJson_iconImageFilename(int currentNavMenu, int panel)
+        public string readJson_AppImageFilename(int currentNavMenu, int panel)
         {
             return jsonConfig.Config[currentNavMenu][panel][2];
         }
 
-        public string readJson_iconName(int currentNavMenu, int panel)
+        public string readJson_AppName(int currentNavMenu, int panel)
         {
             return jsonConfig.Config[currentNavMenu][panel][4];
         }
 
         //------------------------------------------------------------ Write To Json
+        public void writeJson__NavImageFilename(int currentNavMenu, string appFilename)
+        {
+            jsonConfig.NavBarIcons[currentNavMenu] = appFilename;
+        }
+
         public void writeJson_IconName(int currentNavMenu, int panel, string newIconName)
         {
             jsonConfig.Config[currentNavMenu][panel][4] = newIconName;
@@ -488,27 +495,27 @@ namespace DesktopSkin
         private void iconDisplay()
         {
             // Panel 1
-            iconBoxes[0].BackgroundImage = readJson_iconImage(currentNavMenu, 0);
+            iconBoxes[0].BackgroundImage = readJson_AppImage(currentNavMenu, 0);
             iconNames[0].Text = jsonConfig.Config[currentNavMenu][0][4];
 
             // Panel 2
-            iconBoxes[1].BackgroundImage = readJson_iconImage(currentNavMenu, 1);
+            iconBoxes[1].BackgroundImage = readJson_AppImage(currentNavMenu, 1);
             iconNames[1].Text = jsonConfig.Config[currentNavMenu][1][4];
 
             // Panel 3
-            iconBoxes[2].BackgroundImage = readJson_iconImage(currentNavMenu, 2);
+            iconBoxes[2].BackgroundImage = readJson_AppImage(currentNavMenu, 2);
             iconNames[2].Text = jsonConfig.Config[currentNavMenu][2][4];
 
             // Panel 4
-            iconBoxes[3].BackgroundImage = readJson_iconImage(currentNavMenu, 3);
+            iconBoxes[3].BackgroundImage = readJson_AppImage(currentNavMenu, 3);
             iconNames[3].Text = jsonConfig.Config[currentNavMenu][3][4];
 
             // Panel 5
-            iconBoxes[4].BackgroundImage = readJson_iconImage(currentNavMenu, 4);
+            iconBoxes[4].BackgroundImage = readJson_AppImage(currentNavMenu, 4);
             iconNames[4].Text = jsonConfig.Config[currentNavMenu][4][4];
 
             // Panel 6
-            iconBoxes[5].BackgroundImage = readJson_iconImage(currentNavMenu, 5);
+            iconBoxes[5].BackgroundImage = readJson_AppImage(currentNavMenu, 5);
             iconNames[5].Text = jsonConfig.Config[currentNavMenu][5][4];
 
             // NavBarIcons

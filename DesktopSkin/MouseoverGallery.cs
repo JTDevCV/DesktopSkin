@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
 using System.Collections;
@@ -8,26 +13,25 @@ using System.Globalization;
 
 namespace DesktopSkin
 {
-    public partial class IconGallery : UserControl
+    public partial class MouseoverGallery : UserControl
     {
-        List<IconDisplay> iconDisplays;
-        List<string> iconNamesResx = new List<string>();
+        List<MouseoverDisplay> mouseoverDisplays;
+        List<string> mouseoverFilenamesResx = new List<string>();
         int numUsedImage = 0;
 
-        public IconGallery()
+        public MouseoverGallery()
         {
             InitializeComponent();
 
             // IconDisplays
-            iconDisplays = new List<IconDisplay> { iconDisplay1, iconDisplay2, iconDisplay3, iconDisplay4, iconDisplay5,
-                                                    iconDisplay6, iconDisplay7, iconDisplay8, iconDisplay9, iconDisplay10,
-                                                    iconDisplay11, iconDisplay12, iconDisplay13, iconDisplay14, iconDisplay15,
-                                                    iconDisplay16, iconDisplay17, iconDisplay18, iconDisplay19, iconDisplay20 };
+            mouseoverDisplays = new List<MouseoverDisplay> { mouseoverDisplay1, mouseoverDisplay2, mouseoverDisplay3, mouseoverDisplay4,
+                                                        mouseoverDisplay5, mouseoverDisplay6, mouseoverDisplay7, mouseoverDisplay8 };
+
 
             enumerateIconsRes_Gal();
         }
 
-        private void IconGallery_Load(object sender, EventArgs e)
+        private void MouseoverGallery_Load(object sender, EventArgs e)
         {
             nextButton.Click += new EventHandler(nextORprevious);
             previousButton.Click += new EventHandler(nextORprevious);
@@ -60,14 +64,14 @@ namespace DesktopSkin
 
         private void nextButtonClick()
         {
-            int numImages = iconNamesResx.Count;
+            int numImages = mouseoverFilenamesResx.Count;
 
-            for (int i = 0; i < iconDisplays.Count; i++)
+            for (int i = 0; i < mouseoverDisplays.Count; i++)
             {
                 if (numUsedImage < numImages)
                 {
-                    iconDisplays[i].Icon = (Image)iconImagesRESX.ResourceManager.GetObject(iconNamesResx[numUsedImage]);
-                    iconDisplays[i].IconText = iconNamesResx[numUsedImage];
+                    mouseoverDisplays[i].MouseoverImage = (Image)mouseoverImagesRESX.ResourceManager.GetObject(mouseoverFilenamesResx[numUsedImage]);
+                    mouseoverDisplays[i].MouseoverFilename = mouseoverFilenamesResx[numUsedImage];
                     numUsedImage++;
                 }
             }
@@ -78,9 +82,9 @@ namespace DesktopSkin
 
         private void previousButtonClick()
         {
-            if (numUsedImage > iconDisplays.Count)
+            if (numUsedImage > mouseoverDisplays.Count)
             {
-                numUsedImage -= iconDisplays.Count * 2;
+                numUsedImage -= mouseoverDisplays.Count * 2;
                 nextButtonClick();
             }
 
@@ -92,17 +96,18 @@ namespace DesktopSkin
         private void enumerateIconsRes_Gal()
         {
             ResourceSet resourceSet =
-                iconImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+                mouseoverImagesRESX.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
             foreach (DictionaryEntry entry in resourceSet)
             {
                 string resourceKey = entry.Key.ToString();
 
-                iconNamesResx.Add(resourceKey);
-                // Console.WriteLine(resourceKey);
+                mouseoverFilenamesResx.Add(resourceKey);
+                //Console.WriteLine(resourceKey);
             }
+            mouseoverFilenamesResx.Reverse();
             nextButtonClick();
-            //Console.WriteLine(iconNamesResx.Count);
+            //Console.WriteLine(mouseoverFilenamesResx.Count);
         }
     }
 }

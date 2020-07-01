@@ -63,6 +63,16 @@ namespace DesktopSkin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _null {
+            get {
+                object obj = ResourceManager.GetObject("_null", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap apps {
             get {
                 object obj = ResourceManager.GetObject("apps", resourceCulture);
@@ -96,6 +106,16 @@ namespace DesktopSkin {
         internal static System.Drawing.Bitmap gfolder {
             get {
                 object obj = ResourceManager.GetObject("gfolder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap help {
+            get {
+                object obj = ResourceManager.GetObject("help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
