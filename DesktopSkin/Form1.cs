@@ -31,7 +31,7 @@ namespace DesktopSkin
         private int gradientBarHeight, gradientBarWidth;
         private int animatePanelHeight, animatePanelWidth;
 
-        string jsonFile = File.ReadAllText(@"C:\Users\joshk\OneDrive\Documents\GitHub\C#\DesktopSkin\JsonProperties.json");
+        string jsonFile = File.ReadAllText(@"C:/Users/joshk/OneDrive/Documents/GitHub/C#/WinForm/DesktopSkin/JsonProperties.json");
         JsonConfig jsonConfig;
 
         int currentNavMenu = 0;

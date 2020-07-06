@@ -22,5 +22,305 @@ namespace DesktopSkin.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G1_O1 {
+            get {
+                return ((string)(this["G1_O1"]));
+            }
+            set {
+                this["G1_O1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G1_O2 {
+            get {
+                return ((string)(this["G1_O2"]));
+            }
+            set {
+                this["G1_O2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G1_O3 {
+            get {
+                return ((string)(this["G1_O3"]));
+            }
+            set {
+                this["G1_O3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G1_O4 {
+            get {
+                return ((string)(this["G1_O4"]));
+            }
+            set {
+                this["G1_O4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G1_O5 {
+            get {
+                return ((string)(this["G1_O5"]));
+            }
+            set {
+                this["G1_O5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G1_O6 {
+            get {
+                return ((string)(this["G1_O6"]));
+            }
+            set {
+                this["G1_O6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G2_O1 {
+            get {
+                return ((string)(this["G2_O1"]));
+            }
+            set {
+                this["G2_O1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G2_O2 {
+            get {
+                return ((string)(this["G2_O2"]));
+            }
+            set {
+                this["G2_O2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G2_O3 {
+            get {
+                return ((string)(this["G2_O3"]));
+            }
+            set {
+                this["G2_O3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G2_O4 {
+            get {
+                return ((string)(this["G2_O4"]));
+            }
+            set {
+                this["G2_O4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G2_O5 {
+            get {
+                return ((string)(this["G2_O5"]));
+            }
+            set {
+                this["G2_O5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G2_O6 {
+            get {
+                return ((string)(this["G2_O6"]));
+            }
+            set {
+                this["G2_O6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G3_O1 {
+            get {
+                return ((string)(this["G3_O1"]));
+            }
+            set {
+                this["G3_O1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G3_O2 {
+            get {
+                return ((string)(this["G3_O2"]));
+            }
+            set {
+                this["G3_O2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G3_O3 {
+            get {
+                return ((string)(this["G3_O3"]));
+            }
+            set {
+                this["G3_O3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G3_O4 {
+            get {
+                return ((string)(this["G3_O4"]));
+            }
+            set {
+                this["G3_O4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G3_O5 {
+            get {
+                return ((string)(this["G3_O5"]));
+            }
+            set {
+                this["G3_O5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G3_O6 {
+            get {
+                return ((string)(this["G3_O6"]));
+            }
+            set {
+                this["G3_O6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G4_O1 {
+            get {
+                return ((string)(this["G4_O1"]));
+            }
+            set {
+                this["G4_O1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G4_O2 {
+            get {
+                return ((string)(this["G4_O2"]));
+            }
+            set {
+                this["G4_O2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G4_O3 {
+            get {
+                return ((string)(this["G4_O3"]));
+            }
+            set {
+                this["G4_O3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G4_O4 {
+            get {
+                return ((string)(this["G4_O4"]));
+            }
+            set {
+                this["G4_O4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G4_O5 {
+            get {
+                return ((string)(this["G4_O5"]));
+            }
+            set {
+                this["G4_O5"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string G4_O6 {
+            get {
+                return ((string)(this["G4_O6"]));
+            }
+            set {
+                this["G4_O6"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("_001")]
+        public string Setting {
+            get {
+                return ((string)(this["Setting"]));
+            }
+            set {
+                this["Setting"] = value;
+            }
+        }
     }
 }
