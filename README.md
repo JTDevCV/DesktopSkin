@@ -4,6 +4,7 @@ Rainmeter --> C# WinForm
 
 The Spectrum Launcher can only be run with monitors with a resolution of 1920x1080 as a result of using c# winform.
 
+![ScreenShot](https://github.com/JTDev21/Spectrum-CS/blob/master/Screenshot.png)
 ---
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
